@@ -123,7 +123,7 @@ nav ul li a:is(:link, :active, :visited).active {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 200px 0px 0px 0px;
+  padding: 100px 0px 0px 0px;
   gap: 30px;
 }
 .inner h1 {
