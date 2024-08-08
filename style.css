@@ -35,7 +35,7 @@ nav ul {
   padding: 14px 10px 14px 10px;
   border-radius: 32px;
   border: 1px solid var(--Neutrals-Neutrals900, #e6e6e6);
-background-color:  var(--Base-Base-White, #fafafa);;
+  background-color: var(--Base-Base-White, #fafafa);
   box-shadow: 0px 16px 32px 0px rgba(36, 46, 73, 0.05);
   gap: 50px;
 }
@@ -427,8 +427,8 @@ select {
   gap: 40px;
   padding: 50px;
 }
-.service a{
-text-decoration: none;
+.service a {
+  text-decoration: none;
 }
 .live-chat {
   width: 30vw;
@@ -730,7 +730,7 @@ text-decoration: none;
 
 .dot.active {
   width: 50px;
-  border-radius: 2px;
+  border-radius: 32px;
   background: var(--Secondary-Secondary, #28a745);
 }
 .next {
@@ -923,7 +923,7 @@ text-decoration: none;
 }
 
 .faq-item {
-width: 45vw;
+  width: 45vw;
   padding: 24px;
   gap: 64px;
   border-radius: 24px;
@@ -947,11 +947,11 @@ width: 45vw;
 .faq-answer {
   display: none;
   padding: 10px 0;
-  color: var(--Base-Base-White, #FAFAFA);
-font-size: 16px;
-font-style: normal;
-font-weight: 500;
-line-height: 160%; /* 25.6px */
+  color: var(--Base-Base-White, #fafafa);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 160%; /* 25.6px */
 }
 
 .faq-toggle {
@@ -993,81 +993,287 @@ line-height: 160%; /* 25.6px */
   line-height: 56px; /* 116.667% */
   letter-spacing: -0.96px;
 }
-.secondlast{
+.secondlast {
   width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 100px;
-
 }
-.secondinr{
+.secondinr {
   width: 95vw;
-flex-shrink: 0;
-border-radius: 24px;
-background: var(--Primary-Primary, #007BFF);
-display: flex;
-align-items: center;
-gap: 150px;
+  flex-shrink: 0;
+  border-radius: 24px;
+  background: var(--Primary-Primary, #007bff);
+  display: flex;
+  align-items: center;
+  gap: 150px;
 }
-.object img{
+.object img {
   position: absolute;
   right: 69.5%;
   margin-top: 1.9rem;
 }
-.getqoute{
+.getqoute {
   display: flex;
   flex-direction: column;
   gap: 30px;
+}
+.circle {
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  background: var(--Secondary-Secondary500, #50d56f);
+}
+.getqoute p {
+  color: var(--Asklepios-Gray-White, var(--White, #fff));
+  font-family: Gilroy;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.18px;
+}
+.getqoute h1 {
+  color: var(--Asklepios-Gray-White, var(--White, #fff));
+  font-family: Gilroy;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 56px; /* 116.667% */
+  letter-spacing: -0.96px;
+  width: 30vw;
+}
+.getqoute a {
+  display: flex;
+  height: 64px;
+  width: 250px;
+  padding: 16px 32px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 32px;
+  background: var(--Secondary-Secondary500, #50d56f);
+  color: var(--Base-Base-Black, #036);
+  font-family: Gilroy;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.18px;
+  text-decoration: none;
+}
+.contact {
+  width: 100vw;
+  height: 100vh;
+  padding: 50px;
+  display: flex;
+  gap: 40px;
+}
+.imageTag {
+  background-image: url("./assets/Rectangle\ 1150.png");
+  background-position: center;
+  background-size: cover;
+  width: 566px;
+  height: 78.5vh;
+  top: 118px;
+  left: 24px;
+  gap: 0px;
+  border-radius: 24px;
+  opacity: 0px;
+  overflow: hidden;
+}
+.inner-content {
+border-radius: 24px;
+background: linear-gradient(0deg, #036 7.1%, rgba(40, 167, 69, 0.00) 96.87%);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-direction: column;
+  padding: 0px 0px 30px 0px;
+}
+
+.phonenmb{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  width: 100%;
 
 }
-.circle{
-  width: 8px;
-height: 8px;
-border-radius: 2px;
-background: var(--Secondary-Secondary500, #50D56F);
+.cntct{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
-.getqoute p{
-  color: var(--Asklepios-Gray-White, var(--White, #FFF));
+.foems{
+  position: absolute;
+  margin-bottom:4.5rem;
+  margin-right: 10rem;
+  width: 191px;
+height: 44px;
+flex-shrink: 0;
+border-radius: 12px;
+border: 1px solid var(--Blue-LT, #E3EFFF);
+background: var(--White, #FFF);
+box-shadow: 0px 16px 32px 0px rgba(36, 46, 73, 0.05);
+}
+.cntct h5{
+  color: var(--Base-Base-White, #FAFAFA);
 font-family: Gilroy;
-font-size: 18px;
+font-size: 20px;
 font-style: normal;
-font-weight: 700;
+font-weight: 600;
+line-height: 24px; /* 120% */
+letter-spacing: 0.2px;
+}
+.main-form {
+  width: 70vw;
+  height: 78.5vh;
+  border-radius: 24px;
+  background: #f2f5f9;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 20px;
+  padding: 50px;
+}
+.main-form h1 {
+  color: var(--Base-Base-Black, #036);
+  font-family: Gilroy;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 103%; /* 65.92px */
+  letter-spacing: -3.2px;
+}
+.response {
+  display: flex;
+  gap: 30px;
+}
+.quick {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.quick p {
+  color: var(--Base-Base-Black, #036);
+  font-family: Gilroy;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.inputs {
+  display: flex;
+  gap: 20px;
+}
+#name {
+  width: 25vw;
+  height: 64px;
+  flex-shrink: 0;
+  border-radius: 24px;
+  background: #f2f5f9;
+  border-radius: 24px;
+  border: 0.5px solid var(--H2, #6d758f);
+  padding: 15px;
+  color: var(--Base-Base-Black, #036);
+  font-family: Gilroy;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.main-form h3 {
+  color: var(--Base-Base-Black, #036);
+  font-family: Gilroy;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.checks {
+  display: flex;
+  gap: 15px;
+}
+input[type="checkbox"] {
+  transform: scale(1.5); /* Scale the checkbox to 1.5 times its original size */
+  -webkit-transform: scale(1.5); /* For Safari */
+  -moz-transform: scale(1.5); /* For older versions of Firefox */
+  -ms-transform: scale(1.5); /* For Internet Explorer */
+  -o-transform: scale(1.5); /* For older versions of Opera */
+  margin: 10px; /* Optional: Add some margin around the checkbox */
+  cursor: pointer;
+}
+.inner-check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ border-radius: 24px;
+border: 1px solid var(--H2, #6D758F);
+padding: 10px;
+cursor: pointer;
+}
+.inner-check label{
+  color: var(--Base-Base-Black, #036);
+font-family: Gilroy;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
 line-height: normal;
-letter-spacing: -0.18px;
 }
-.getqoute h1{
-  color: var(--Asklepios-Gray-White, var(--White, #FFF));
-font-family: Gilroy;
-font-size: 48px;
-font-style: normal;
-font-weight: 800;
-line-height: 56px; /* 116.667% */
-letter-spacing: -0.96px;
-width: 30vw;
+#message{
+  width: 51vw;
+  height: 18vh;
+  border-radius: 24px;
+  background: #f2f5f9;
+  border: 0.5px solid var(--H2, #6d758f);
+  padding: 15px;
+  color: var(--Base-Base-Black, #036);
+  font-family: 'Gilroy', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: normal;
+  text-align: left; /* Ensure text aligns to the left */
+  box-sizing: border-box;
+  outline: none;
+  display: block; /* or inline-block if needed */
+  overflow: hidden; /* Prevents text from overflowing */
 }
-.getqoute a{
- display: flex;
+.form-btn{
+  width: 51vw;
+  height: 5vh;
+  display: flex;
+  margin-top: 20px;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+#submit{
+  display: inline-flex;
 height: 64px;
-width: 250px;
 padding: 16px 32px;
 justify-content: center;
 align-items: center;
 gap: 8px;
+flex-shrink: 0;
 border-radius: 32px;
-background: var(--Secondary-Secondary500, #50D56F);
-color: var(--Base-Base-Black, #036);
+background: var(--Primary-Primary, #007BFF);
+border: 1px solid #007BFF;
+color: var(--Asklepios-Gray-White, var(--White, #FFF));
 font-family: Gilroy;
 font-size: 18px;
 font-style: normal;
 font-weight: 700;
 line-height: normal;
 letter-spacing: -0.18px;
-text-decoration: none;
-
+cursor: pointer;
 }
-
-footer{
+footer {
   width: 100vw;
   margin-top: 100px;
 }
