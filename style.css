@@ -1344,6 +1344,121 @@ font-style: normal;
 font-weight: 500;
 line-height: normal;
 }
+.industries{
+  width: 100vw;
+  display: flex;
+  padding: 50px;
+  flex-direction: column;
+  gap: 50px;
+
+}
+.industries h1{
+  width: 100vw;
+text-align: center;
+  color: var(--Base-Base-Black, #036);
+text-align: center;
+font-family: Gilroy;
+font-size: 64px;
+font-style: normal;
+font-weight: 700;
+line-height: 103%; /* 65.92px */
+letter-spacing: -3.2px;
+}
+.main-industry{
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 30px;
+}
+.main-content{
+  display: flex;
+  gap: 30px;
+}
+.menu{
+  width: 20vw;
+  height: 108vh;
+  border-radius: 24px;
+background: var(--Base-Base-Black, #036);
+  padding: 30px;
+}
+.menu h3{
+  color: var(--Secondary-Secondary, #28A745);
+font-family: Gilroy;
+font-size: 32px;
+font-style: normal;
+font-weight: 700;
+line-height: 32px; /* 100% */
+letter-spacing: -0.32px;
+}
+.menu ul{
+    margin-top: 20px;
+}
+.menu ul li{
+
+  list-style-type: none;
+  color: var(--Base-Base-White, #FAFAFA);
+font-family: Gilroy;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 32px; /* 160% */
+letter-spacing: -0.2px;
+
+}
+.righty{
+width: 70vw;
+border-radius: 24px;
+background: #F2F5F9;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+gap: 30px;
+padding: 50px;
+}
+.inner-provider{
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 40px;
+}
+.provider{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+.call-center{
+  display: flex;
+  gap: 60px;
+}
+.nam{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
+}
+.nam h2{
+color: var(--Base-Base-Black, #036);
+font-family: Gilroy;
+font-size: 36px;
+font-style: normal;
+font-weight: 700;
+line-height: 44px; /* 122.222% */
+letter-spacing: -0.72px;
+text-align: left;
+}
+.nam p{
+  color: var(--H2, #6D758F);
+font-family: "Plus Jakarta Sans";
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+width: 20vw;
+}
 footer {
   width: 100vw;
   margin-top: 100px;
