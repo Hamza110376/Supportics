@@ -1459,6 +1459,58 @@ font-weight: 500;
 line-height: normal;
 width: 20vw;
 }
+.faqs{
+  width: 100vw;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 50px 100px 50px 100px;
+}
+.faqs h1{
+  color: var(--Base-Base-Black, #036);
+font-family: Gilroy;
+font-size: 64px;
+font-style: normal;
+font-weight: 700;
+line-height: 103%; /* 65.92px */
+letter-spacing: -3.2px;
+width: 10vw;
+}
+.see-all{
+  height: 20vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.see-all p{
+  color: var(--H2, #6D758F);
+font-family: Gilroy;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+width: 20vw;
+}
+.see-all a{
+  display: flex;
+height: 64px;
+padding: 16px 32px;
+justify-content: center;
+align-items: center;
+gap: 8px;
+flex-shrink: 0;
+border-radius: 32px;
+background: var(--Primary-Primary, #007BFF);
+color: var(--Asklepios-Gray-White, var(--White, #FFF));
+font-family: Gilroy;
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+letter-spacing: -0.18px;
+text-decoration: none;
+}
 footer {
   width: 100vw;
   margin-top: 100px;
