@@ -176,3 +176,5 @@ document.querySelectorAll(".faq-question").forEach((item) => {
 
 const items = document.querySelectorAll(".menu ul li");
 items.forEach((item)=> item.classList.remove("active"))
+
+

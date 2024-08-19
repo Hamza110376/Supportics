@@ -1,42 +1,368 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>faqs</title>
+    <style>
+        .faq-container {
+            width: 95vw;
+            height: 95vh;
+            background-color: #f2f5f9;
+            border-radius: 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 50px;
+        }
+
+        .tabs-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .topic-label {
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .tabs {
+            display: flex;
+            gap: 10px;
+        }
+
+        .tab {
+            display: flex;
+            height: 40px;
+            padding: 8px 10px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 44px;
+            color: var(--Base-Base-Black, #036);
+            text-align: center;
+            font-family: Gilroy;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            letter-spacing: -0.16px;
+
+        }
+
+        .tab.active {
+            background-color: #007bff;
+            color: white;
+            border-color: transparent;
+            color: var(--Asklepios-Gray-White, var(--White, #FFF));
+            text-align: center;
+            font-family: Gilroy;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            letter-spacing: -0.16px;
+        }
+
+        .faq-item {
+            background-color: transparent;
+            background: var(--Base-Base-White, #fafafa);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 24px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            padding: 0px;
+            border-radius: 8px;
+        }
+
+        .faq-content {
+            background-color: #f2f5f9;
+        }
+
+        .faq-question {
+            padding: 15px;
+            background-color: transparent;
+            border: none;
+            text-align: left;
+            width: 100%;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .arrow {
+            font-size: 12px;
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .arrow {
+            transform: rotate(180deg);
+        }
+
+        .faq-question:hover {
+            background-color: #f0f0f0;
+        }
+
+        .faq-answer {
+            display: none;
+            padding: 15px;
+            background-color: var(--Base-Base-Black, #036);
+            color: white;
+            border-radius: 0 0 10px 10px;
+        }
+
+        .faq-item.active .faq-question {
+            background-color: var(--Base-Base-Black, #036);
+            color: white;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+    </style>
 </head>
+
 <body>
     <div class="main">
         <nav>
-            <img src="./assets/Layer_1.png" alt="logo">
+            <img src="./assets/Layer_1.png" alt="logo" />
             <ul>
-                <li><a href="./Home.html"> <span> <img src="./assets/elements.png" alt=""> </span> Home</a></li>
+                <li>
+                    <a href="./Home.html">
+                        <span> <img src="./assets/elements.png" alt="" /> </span> Home</a>
+                </li>
                 <li><a href="./Services.html">Services</a></li>
                 <li><a href="./industries.html">Industries</a></li>
                 <li><a href="./aboutus.html">About Us</a></li>
                 <li><a href="./blogs.html">Blogs</a></li>
                 <li><a href="./contact.html">Contact</a></li>
             </ul>
-        
+
             <div class="btn">
-                <button class="numbr"> <span> <img src="./assets/elements2.png"> </span> <a href="#">+1 23 4567
-                        89</a></button>
-                <button class="qoute"> <a href="#">Get A Quote</a> </button>
+                <button class="numbr">
+                    <span> <img src="./assets/elements2.png" /> </span>
+                    <a href="#">+1 23 4567 89</a>
+                </button>
+                <button class="qoute"><a href="#">Get A Quote</a></button>
             </div>
         </nav>
         <div class="faqs">
-            <h1>Frequently
-            Asked
-            Questions</h1>
+            <h1>Frequently Asked Questions</h1>
             <div class="see-all">
-                <p>Have any questions or still unsure about our
-                proudct? We have all of the answers covered.</p>
-                <a href="#">See All FAQ’s  <span><img src="./assets/Monotone add2.png" alt=""></span></a>
+                <p>
+                    Have any questions or still unsure about our proudct? We have all of
+                    the answers covered.
+                </p>
+                <a href="#">See All FAQ’s
+                    <span><img src="./assets/Monotone add2.png" alt="" /></span></a>
+            </div>
+        </div>
+        <div class="main-faqs">
+            <div class="faq-container">
+                <div class="tabs-wrapper">
+                    <div class="topic-label">Topic</div>
+                    <div class="tabs">
+                        <button class="tab active" data-topic="general-info">
+                            General Information
+                        </button>
+                        <button class="tab" data-topic="service-features">
+                            Service Features
+                        </button>
+                        <!-- Add more tabs as needed -->
+                    </div>
+                </div>
+
+                <div class="faq-content">
+                    <div class="faq-item" data-topic="general-info">
+                        <button class="faq-question">
+                            Can Supportics handle high volumes of customer inquiries?
+                            <span class="arrow">&#9660;</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                Yes, Supportics is equipped to manage high volumes of customer
+                                inquiries efficiently through its various support channels,
+                                including Live Chat, Phone Answering, and Email Support.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq-item" data-topic="general-info">
+                        <button class="faq-question">
+                            How quickly can Supportics start supporting my customers?
+                            <span class="arrow">&#9660;</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                Supportics can begin supporting your customers shortly after
+                                the initial setup and onboarding process, which is designed to
+                                be quick and efficient.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq-item" data-topic="general-info">
+                        <button class="faq-question">
+                            How will Supportics understand my offerings?
+                            <span class="arrow">&#9660;</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                Supportics conducts thorough training sessions and works
+                                closely with you to understand your products, services, and
+                                customer interaction requirements, ensuring accurate and
+                                helpful support..
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-topic="general-info">
+                        <button class="faq-question">
+                            How do I get the chat working on my website?
+                            <span class="arrow">&#9660;</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                Supportics provides a simple integration process with detailed
+                                instructions to get the live chat feature up and running on
+                                your website.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-topic="general-info">
+                        <button class="faq-question">
+                            Do you offer an account manager, and what is their role?
+                            <span class="arrow">&#9660;</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                Yes, Supportics assigns an account manager to each client. The
+                                account manager's role is to ensure smooth communication,
+                                address any concerns, and help optimize the support services
+                                provided..
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Add more FAQ items here -->
+                    <!-- service-info faqs are here -->
+                    <div class="faq-item" data-topic="service-features">
+                        <button class="faq-question">
+                            Will my customers notice they're talking to an outsourced team?
+                            <span class="arrow">&#9660;</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                YNo, Supportics ensures that all agents are well-trained and
+                                familiar with your company's policies and products, providing
+                                seamless and professional customer interactions.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq-item" data-topic="service-features">
+                        <button class="faq-question">
+                            Can I monitor the performance of the outsourced customer
+                            support?
+                            <span class="arrow">&#9660;</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                Yes, Supportics provides detailed performance reports and
+                                analytics, allowing you to monitor the effectiveness and
+                                quality of the customer support services.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq-item" data-topic="service-features">
+                        <button class="faq-question">
+                            Is my information secure with Supportics?
+                            <span class="arrow">&#9660;</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                Yes, Supportics prioritizes data security and employs
+                                stringent measures to protect your information, ensuring
+                                confidentiality and compliance with relevant regulations.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq-item" data-topic="service-features">
+                        <button class="faq-question">
+                            What happens after the free trial with Supportics?
+                            <span class="arrow">&#9660;</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                After the free trial, you can choose from various support
+                                packages offered by Supportics based on your needs and
+                                continue benefiting from their services without interruption.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq-item" data-topic="service-features">
+                        <button class="faq-question">
+                            Can I self-chat with my website visitors using Supportics?
+                            <span class="arrow">&#9660;</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                Yes, Supportics allows you to interact directly with your
+                                website visitors through the chat feature if you prefer to
+                                manage certain interactions personally.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-    <script src="./script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const tabs = document.querySelectorAll(".tab");
+            const faqItems = document.querySelectorAll(".faq-item");
+
+            function showFaqsForActiveTab() {
+                const activeTab = document.querySelector(".tab.active");
+                const activeTopic = activeTab.getAttribute("data-topic");
+
+                faqItems.forEach(item => {
+                    if (item.getAttribute("data-topic") === activeTopic) {
+                        item.style.display = "block";
+                    } else {
+                        item.style.display = "none";
+                    }
+                });
+            }
+
+            tabs.forEach(tab => {
+                tab.addEventListener("click", function () {
+                    tabs.forEach(t => t.classList.remove("active"));
+                    tab.classList.add("active");
+
+                    showFaqsForActiveTab();
+                });
+            });
+
+            const faqQuestions = document.querySelectorAll(".faq-question");
+
+            faqQuestions.forEach(question => {
+                question.addEventListener("click", function () {
+                    const faqItem = question.parentElement;
+                    faqItem.classList.toggle("active");
+                });
+            });
+
+            // Call the function to show the correct FAQs on page load
+            showFaqsForActiveTab();
+        });
+
+    </script>
 </body>
+
 </html>

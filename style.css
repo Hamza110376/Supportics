@@ -1511,6 +1511,13 @@ line-height: normal;
 letter-spacing: -0.18px;
 text-decoration: none;
 }
+.main-faqs{
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 footer {
   width: 100vw;
   margin-top: 100px;
