@@ -1457,7 +1457,7 @@ font-size: 18px;
 font-style: normal;
 font-weight: 500;
 line-height: normal;
-width: 20vw;
+width: 10vw;
 }
 .faqs{
   width: 100vw;
@@ -1474,7 +1474,7 @@ font-style: normal;
 font-weight: 700;
 line-height: 103%; /* 65.92px */
 letter-spacing: -3.2px;
-width: 10vw;
+width: 20vw;
 }
 .see-all{
   height: 20vh;
@@ -1551,6 +1551,12 @@ letter-spacing: -0.18px;
 text-decoration: none;
 }
 .arow{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-blogs{
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;

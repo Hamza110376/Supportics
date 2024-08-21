@@ -1,31 +1,477 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Blogs</title>
 </head>
-<body>
-    <nav>
-        <img src="./assets/Layer_1.png" alt="logo">
-        <ul>
-            <li><a href="./Home.html"> <span> <img src="./assets/elements.png" alt=""> </span> Home</a></li>
-            <li><a href="./Services.html">Services</a></li>
-            <li><a href="./industries.html">Industries</a></li>
-            <li><a href="./aboutus.html">About Us</a></li>
-            <li><a href="./blogs.html">Blogs</a></li>
-            <li><a href="./contact.html">Contact</a></li>
-        </ul>
-    
-        <div class="btn">
-            <button class="numbr"> <span> <img src="./assets/elements2.png"> </span> <a href="#">+1 23 4567
-                    89</a></button>
-            <button class="qoute"> <a href="#">Get A Quote</a> </button>
-        </div>
-    </nav>
-    <h1>Blogs</h1>
+<style>
+    .container {
+        width: 95vw;
+        display: flex;
+        flex-direction: column;
+        border-radius: 24px;
+padding: 50px;
+        align-items: center;
+        justify-content: center;
+        background: var(--Color, #F2F5F9);
+    }
 
-        <script src="./script.js"></script>
+    .search-container {
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        margin-bottom: 20px;
+    }
+
+    .search-container input {
+        width: 651px;
+        height: 56px;
+        background: var(--Color, #F2F5F9);
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 16px;
+        border: 0.5px solid var(--H2, #6D758F);
+        outline: none;
+        color: var(--H2, #6D758F);
+        font-family: Gilroy;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    .search-container .search-btn {
+        display: flex;
+        height: 64px;
+        padding: 16px 32px;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        border-radius: 32px;
+        background: var(--Base-Base-Black, #036);
+        color: var(--Asklepios-Gray-White, var(--White, #FFF));
+        font-family: Gilroy;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: -0.18px;
+    }
+
+    .tabs {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .tab {
+        padding: 10px 20px;
+        background-color: #eee;
+        border: none;
+        border: 1px solid var(--Base-Base-Black, #036);
+        margin: 0 5px;
+        cursor: pointer;
+        border-radius: 24px;
+        transition: background-color 0.3s ease;
+    }
+
+    .tab.active {
+        display: flex;
+        height: 40px;
+        padding: 8px 10px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 44px;
+        background: var(--Therapeia-Blue-60, #0F67FE);
+        color: var(--Asklepios-Gray-White, var(--White, #FFF));
+        text-align: center;
+        font-family: Gilroy;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        letter-spacing: -0.16px;
+    }
+
+    .blog-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .blog-card {
+        background-color: white;
+        width: 30vw;
+        margin-bottom: 20px;
+        padding: 20px;
+        border-radius: 24px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    .blog-card img {
+        width: 530px;
+        height: 340px;
+        flex-shrink: 0;
+        object-fit: cover;
+        border-radius: 16px;
+        padding: 10px;
+    }
+
+    .blog-card h2 {
+        font-size: 18px;
+        margin-bottom: 10px;
+        text-align: left;
+        color: var(--Base-Base-Black, #036);
+        font-family: Gilroy;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 32px;
+        /* 133.333% */
+        letter-spacing: -0.24px;
+    }
+
+    .blog-card p {
+        font-size: 14px;
+        margin-bottom: 20px;
+        color: #666;
+        text-align: left;
+        color: var(--H2, #6D758F);
+        font-family: Gilroy;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 160%;
+        /* 28.8px */
+    }
+
+    .read-more-btn {
+        display: flex;
+        width: 530px;
+        height: 64px;
+        padding: 16px 32px;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        flex-shrink: 0;
+        border-radius: 32px;
+        background: var(--Base-Base-Black, #036);
+        color: var(--Asklepios-Gray-White, var(--White, #FFF));
+        font-family: Gilroy;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: -0.18px;
+    }
+
+    .read-more-btn:hover {
+        background-color: #024;
+    }
+
+    .pagination {
+        display: flex;
+        width: 60vw;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .pagination button {
+        display: flex;
+        padding: 8px 12px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        border-radius: 32px;
+        border: 1px solid var(--Grey-300, #D0D5DD);
+        background: rgba(255, 255, 255, 0.00);
+    }
+
+    .pagination button:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+    }
+
+    .pagination span {
+        padding: 0 10px;
+        font-size: 16px;
+    }
+
+    .pagination #pageNumbers {
+        display: flex;
+        align-items: center;
+    }
+
+    .page-number {
+        margin: 0 5px;
+        cursor: pointer;
+        font-size: 16px;
+        padding: 5px 10px;
+        border-radius: 4px;
+        background-color: #f0f0f0;
+    }
+
+    .page-number.active-page {
+        border-radius: 6px;
+        border: 1px solid var(--Primary-Primary, #007BFF);
+        background: rgba(255, 255, 255, 0.00);
+    }
+    .arow img{
+        width: 24px;
+height: 24px;
+    }
+</style>
+<body>
+    <div class="main">
+        <nav>
+            <img src="./assets/Layer_1.png" alt="logo">
+            <ul>
+                <li><a href="./Home.html"> <span> <img src="./assets/elements.png" alt=""> </span> Home</a></li>
+                <li><a href="./Services.html">Services</a></li>
+                <li><a href="./industries.html">Industries</a></li>
+                <li><a href="./aboutus.html">About Us</a></li>
+                <li><a href="./blogs.html">Blogs</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+
+            <div class="btn">
+                <button class="numbr"> <span> <img src="./assets/elements2.png"> </span> <a href="#">+1 23 4567
+                        89</a></button>
+                <button class="qoute"> <a href="#">Get A Quote</a> </button>
+            </div>
+        </nav>
+        <div class="faqs">
+            <h1>Blogs & Knowledge Base</h1>
+            <div class="see-all">
+                <p>
+                    Have any questions or still unsure about our proudct? We have all of
+                    the answers covered.
+                </p>
+                <a href="#">See All Blogs
+                    <span class="arow"><img src="./assets/Monotone add2.png" alt="" /></span></a>
+            </div>
+        </div>
+        <div class="main-blogs">
+            <div class="container">
+                <div class="search-container">
+                    <input type="text" id="searchBar" placeholder="Search, topic, tag" oninput="searchBlogs()">
+            
+                    <button class="search-btn">Search</button>
+                </div>
+            
+                <div class="tabs">
+                    <button class="tab active" onclick="filterContent('general')">General Information</button>
+                    <button class="tab" onclick="filterContent('features')">Service Features</button>
+                    <button class="tab" onclick="filterContent('all')">All</button>
+                </div>
+            
+                <div id="blogContainer" class="blog-container">
+                    <div class="blog-card" data-category="general">
+                        <img src="./assets/Frame.png" alt="Blog Image">
+                        <h2>How to Reduce Support Costs & Increase Its Effectiveness in One Go</h2>
+                        <p>We leverages cutting-edge AI technology to offer personalized health assessments..</p>
+                        <button class="read-more-btn">Read Blog  <span class="arow"><img class="erow" src="./assets/Monotone add21.png" alt=""></span></button>
+                    </div>
+            <div class="blog-card" data-category="general">
+                <img src="./assets/Frame.png" alt="Blog Image">
+                <h2>How to Reduce Support Costs & Increase Its Effectiveness in One Go</h2>
+                <p>We leverages cutting-edge AI technology to offer personalized health assessments..</p>
+                <button class="read-more-btn">Read Blog <span class="arow"><img class="erow" src="./assets/Monotone add21.png"
+                            alt=""></span></button>
+            </div>
+            <div class="blog-card" data-category="general">
+                <img src="./assets/Frame.png" alt="Blog Image">
+                <h2>How to Reduce Support Costs & Increase Its Effectiveness in One Go</h2>
+                <p>We leverages cutting-edge AI technology to offer personalized health assessments..</p>
+                <button class="read-more-btn">Read Blog <span class="arow"><img class="erow" src="./assets/Monotone add21.png"
+                            alt=""></span></button>
+            </div>
+            <div class="blog-card" data-category="general">
+                <img src="./assets/Frame.png" alt="Blog Image">
+                <h2>How to Reduce Support Costs & Increase Its Effectiveness in One Go</h2>
+                <p>We leverages cutting-edge AI technology to offer personalized health assessments..</p>
+                <button class="read-more-btn">Read Blog <span class="arow"><img class="erow" src="./assets/Monotone add21.png"
+                            alt=""></span></button>
+            </div>
+            <div class="blog-card" data-category="general">
+                <img src="./assets/Frame.png" alt="Blog Image">
+                <h2>How to Reduce Support Costs & Increase Its Effectiveness in One Go</h2>
+                <p>We leverages cutting-edge AI technology to offer personalized health assessments..</p>
+                <button class="read-more-btn">Read Blog <span class="arow"><img class="erow" src="./assets/Monotone add21.png"
+                            alt=""></span></button>
+            </div>
+            <div class="blog-card" data-category="general">
+                <img src="./assets/Frame.png" alt="Blog Image">
+                <h2>How to Reduce Support Costs & Increase Its Effectiveness in One Go</h2>
+                <p>We leverages cutting-edge AI technology to offer personalized health assessments..</p>
+                <button class="read-more-btn">Read Blog <span class="arow"><img class="erow" src="./assets/Monotone add21.png"
+                            alt=""></span></button>
+            </div>
+            <div class="blog-card" data-category="general">
+                <img src="./assets/Frame.png" alt="Blog Image">
+                <h2>How to Reduce Support Costs & Increase Its Effectiveness in One Go</h2>
+                <p>We leverages cutting-edge AI technology to offer personalized health assessments..</p>
+                <button class="read-more-btn">Read Blog <span class="arow"><img class="erow" src="./assets/Monotone add21.png"
+                            alt=""></span></button>
+            </div>
+            <div class="blog-card" data-category="general">
+                <img src="./assets/Frame.png" alt="Blog Image">
+                <h2>How to Reduce Support Costs & Increase Its Effectiveness in One Go</h2>
+                <p>We leverages cutting-edge AI technology to offer personalized health assessments..</p>
+                <button class="read-more-btn">Read Blog <span class="arow"><img class="erow" src="./assets/Monotone add21.png"
+                            alt=""></span></button>
+            </div>
+            <div class="blog-card" data-category="general">
+                <img src="./assets/Frame.png" alt="Blog Image">
+                <h2>How to Reduce Support Costs & Increase Its Effectiveness in One Go</h2>
+                <p>We leverages cutting-edge AI technology to offer personalized health assessments..</p>
+                <button class="read-more-btn">Read Blog <span class="arow"><img class="erow" src="./assets/Monotone add21.png"
+                            alt=""></span></button>
+            </div>
+            <div class="blog-card" data-category="general">
+                <img src="./assets/Frame.png" alt="Blog Image">
+                <h2>How to Reduce Support Costs & Increase Its Effectiveness in One Go</h2>
+                <p>We leverages cutting-edge AI technology to offer personalized health assessments..</p>
+                <button class="read-more-btn">Read Blog <span class="arow"><img class="erow" src="./assets/Monotone add21.png"
+                            alt=""></span></button>
+            </div>
+                 
+            
+                </div>
+            
+                <div class="pagination">
+                    <button id="prevBtn" onclick="prevPage()">Previous</button>
+                    <div id="pageNumbers"></div>
+                    <button id="nextBtn" onclick="nextPage()">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+    <script>
+        let currentPage = 1;
+        const itemsPerPage = 6;
+
+        function filterContent(category) {
+            const tabs = document.querySelectorAll('.tab');
+            tabs.forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.querySelector(`[onclick="filterContent('${category}')"]`).classList.add('active');
+
+            const blogs = Array.from(document.querySelectorAll('.blog-card'));
+            const filteredBlogs = blogs.filter(blog =>
+                blog.getAttribute('data-category') === category || category === 'all'
+            );
+
+            currentPage = 1; // Reset to the first page whenever the category changes
+            paginateBlogs(filteredBlogs);
+        }
+
+        function paginateBlogs(blogs) {
+            const totalPages = Math.ceil(blogs.length / itemsPerPage);
+            const start = (currentPage - 1) * itemsPerPage;
+            const end = start + itemsPerPage;
+
+            blogs.forEach((blog, index) => {
+                blog.style.display = index >= start && index < end ? 'block' : 'none';
+            });
+
+            updatePagination(totalPages);
+
+            document.getElementById('prevBtn').disabled = currentPage === 1;
+            document.getElementById('nextBtn').disabled = currentPage === totalPages;
+
+            // Show or hide the pagination based on total pages
+            document.querySelector('.pagination').style.display = totalPages > 1 ? 'flex' : 'none';
+        }
+
+        function updatePagination(totalPages) {
+            const pageNumbersContainer = document.getElementById('pageNumbers');
+            pageNumbersContainer.innerHTML = '';
+
+            for (let i = 1; i <= totalPages; i++) {
+                const pageNumber = document.createElement('span');
+                pageNumber.innerText = i;
+                pageNumber.classList.add('page-number');
+                if (i === currentPage) {
+                    pageNumber.classList.add('active-page');
+                }
+                pageNumber.onclick = () => goToPage(i);
+                pageNumbersContainer.appendChild(pageNumber);
+            }
+        }
+
+        function goToPage(page) {
+            currentPage = page;
+            const activeCategory = document.querySelector('.tab.active').innerText.toLowerCase().replace(' ', '');
+            const blogs = Array.from(document.querySelectorAll('.blog-card'));
+            const filteredBlogs = blogs.filter(blog =>
+                blog.getAttribute('data-category') === activeCategory || activeCategory === 'all'
+            );
+
+            paginateBlogs(filteredBlogs);
+        }
+
+        function nextPage() {
+            currentPage++;
+            const activeCategory = document.querySelector('.tab.active').innerText.toLowerCase().replace(' ', '');
+            const blogs = Array.from(document.querySelectorAll('.blog-card'));
+            const filteredBlogs = blogs.filter(blog =>
+                blog.getAttribute('data-category') === activeCategory || activeCategory === 'all'
+            );
+
+            paginateBlogs(filteredBlogs);
+        }
+
+        function prevPage() {
+            currentPage--;
+            const activeCategory = document.querySelector('.tab.active').innerText.toLowerCase().replace(' ', '');
+            const blogs = Array.from(document.querySelectorAll('.blog-card'));
+            const filteredBlogs = blogs.filter(blog =>
+                blog.getAttribute('data-category') === activeCategory || activeCategory === 'all'
+            );
+
+            paginateBlogs(filteredBlogs);
+        }
+
+        // Search Functionality
+        function searchBlogs() {
+            const query = document.getElementById('searchBar').value.toLowerCase();
+            const activeCategory = document.querySelector('.tab.active').innerText.toLowerCase().replace(' ', '');
+
+            const blogs = Array.from(document.querySelectorAll('.blog-card'));
+            const filteredBlogs = blogs.filter(blog => {
+                const matchesCategory = blog.getAttribute('data-category') === activeCategory || activeCategory === 'all';
+                const matchesSearch = blog.innerText.toLowerCase().includes(query);
+                return matchesCategory && matchesSearch;
+            });
+
+            currentPage = 1; // Reset to the first page on a new search
+            paginateBlogs(filteredBlogs);
+        }
+
+        // Initial load
+        document.addEventListener('DOMContentLoaded', () => {
+            filterContent('general'); // Adjust this to your default category if needed
+        });
+
+
+
+
+    </script>
 </body>
+
 </html>
