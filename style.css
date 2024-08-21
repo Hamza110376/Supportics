@@ -31,7 +31,8 @@ nav ul {
   display: flex;
   align-items: center;
   justify-content: center;
-
+position: fixed;
+left: 30%;
   padding: 14px 10px 14px 10px;
   border-radius: 32px;
   border: 1px solid var(--Neutrals-Neutrals900, #e6e6e6);

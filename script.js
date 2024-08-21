@@ -178,3 +178,15 @@ const items = document.querySelectorAll(".menu ul li");
 items.forEach((item)=> item.classList.remove("active"))
 
 
+window.addEventListener("scroll", function () {
+  const nav = document.querySelector("nav ul");
+
+  nav.style.transition = "top 0.3s ease"; 
+  if (window.scrollY > 200) {
+    nav.style.top = "calc(98vh - 50px)"; 
+  } else {
+    nav.style.top = "20px"; 
+  }
+});
+
+
