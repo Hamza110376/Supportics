@@ -182,7 +182,7 @@ window.addEventListener("scroll", function () {
   const nav = document.querySelector("nav ul");
 
   nav.style.transition = "top 0.3s ease"; 
-  if (window.scrollY > 200) {
+  if (window.scrollY > 100) {
     nav.style.top = "calc(98vh - 50px)"; 
   } else {
     nav.style.top = "20px"; 
