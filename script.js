@@ -174,26 +174,26 @@ document.querySelectorAll(".faq-question").forEach((item) => {
 });
 
 
-const items = document.querySelectorAll(".menu ul li");
-items.forEach((item)=> item.classList.remove("active"))
+// const items = document.querySelectorAll(".menu ul li");
+// items.forEach((item)=> item.classList.remove("active"))
 
 
-window.addEventListener("scroll", function () {
-  const nav = document.querySelector("nav ul");
-const btn= document.querySelector("#btn")
-const minilogo = document.querySelector("#minilogo");
-  nav.style.transition = "top 0.3s ease"; 
-  if (window.scrollY > 100) {
-    nav.style.top = "calc(98vh - 50px)"; 
-    btn.style.display="block"
-     minilogo.style.display = "block";
-     nav.style.left="20%"
-  } else {
-    nav.style.top = "20px"; 
-     btn.style.display = "none";
-      minilogo.style.display = "none";
-      nav.style.left = "30%";
-  }
-});
+// window.addEventListener("scroll", function () {
+//   const nav = document.querySelector("nav ul");
+// const btn= document.querySelector("#btn")
+// const minilogo = document.querySelector("#minilogo");
+//   nav.style.transition = "top 0.3s ease"; 
+//   if (window.scrollY > 100) {
+//     nav.style.top = "calc(98vh - 50px)"; 
+//     btn.style.display="block"
+//      minilogo.style.display = "block";
+//      nav.style.left="20%"
+//   } else {
+//     nav.style.top = "20px"; 
+//      btn.style.display = "none";
+//       minilogo.style.display = "none";
+//       nav.style.left = "30%";
+//   }
+// });
 
 
