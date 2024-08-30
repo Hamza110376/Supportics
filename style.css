@@ -108,7 +108,7 @@ nav ul li a:is(:link, :active, :visited).active {
 }
 .qoute {
   display: inline-flex;
- max-width: 424px;
+  max-width: 424px;
   padding: 16px 17.5px 16px 17px;
   align-items: center;
   gap: 8px;
@@ -2090,7 +2090,7 @@ footer {
   .card {
     width: 33vw;
   }
-  .object img{
+  .object img {
     right: 60%;
   }
 }
@@ -2103,69 +2103,116 @@ footer {
   .card {
     width: 33.5vw;
   }
-  .object img{
+  .object img {
     right: 60%;
   }
-  .achivements-in{
+  .achivements-in {
     padding: 96px 80px 96px 80px;
   }
 }
 
-@media (max-width: 1195px){
-  nav{
+@media (max-width: 1195px) {
+  nav {
     padding: 20px;
   }
-.numbr{
-width: 14vw;
-}
-.qoute {
-  width: 12vw;
-
-}
-}
-
-@media (max-width: 768px){
-  nav{
-   display: none;
+  .numbr {
+    width: 14vw;
   }
-.inner{
-  width: 95vw;
-  align-items: center;
+  .qoute {
+    width: 12vw;
+  }
 }
-.inner h1{
-  font-size: 48px;
-  text-align: center;
-}
-.Customer{
- font-size: 48px;
-}
-.svgs svg{ 
-  width: 95vw;
-}
+
+@media (max-width: 768px) {
+  nav {
+    display: none;
+  }
+  .inner {
+    width: 95vw;
+    align-items: center;
+  }
+  .inner h1 {
+    font-size: 48px;
+    text-align: center;
+  }
+  .Customer {
+    font-size: 48px;
+  }
+  .svgs svg {
+    width: 95vw;
+  }
   .trial button {
     width: 23vw !important;
     height: 5.5vh;
     gap: 6px;
   }
   .upper {
-        margin-left: 18rem;
-        margin-top: 6.5rem;
+    margin-left: 18rem;
+    margin-top: 6.5rem;
   }
-  .upper2{
+  .upper2 {
     margin-left: 10rem;
   }
-  .upper3{
+  .upper3 {
     margin-left: 34rem;
   }
-      .achivements-in {
-        padding: 50px;
-        flex-direction: column;
-        gap: 30px;
-      }
-      .left p {
-        width: 50vw;
-      }
-      .live-chat{
-        width: 40vw;
-      }
+  .achivements-in {
+    padding: 50px;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .left p {
+    width: 50vw;
+  }
+  .live-chat {
+    width: 40vw;
+  }
+  .card {
+    width: 50vw;
+  }
+  .section-inner h1 {
+    width: 50vw;
+  }
+  .section-inner {
+    margin-top: 200%;
+  }
+  .assist {
+    margin-top: 180%;
+  }
+  .wifi {
+    width: 50vw;
+  }
+  .colb {
+    margin-left: 35%;
+  }
+  .sliders {
+    width: 4000vw;
+  }
+  .cardss {
+    width: 60vw;
+  }
+  .buttons {
+    margin-left: 35rem;
+  }
+  .wide {
+    width: 55vw;
+  }
+  .faq-container{
+    flex-direction: column;
+  }
+  .faq-item {
+    width: 90vw;
+  }
+  .secondinr {
+    flex-direction: column-reverse;
+  }
+  .object img {
+    right: 45%;
+  }
+.getqoute h1{
+  width: 90vw;
+}
+.secondinr{
+  padding: 50px 50px 0px 50px;
+}
 }
