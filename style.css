@@ -2327,6 +2327,9 @@ footer {
   .object svg{
     width: 400px;
   }
+    .trial button a{
+    font-size: 12px;
+  }
 }
 
 @media (max-width: 375px){
