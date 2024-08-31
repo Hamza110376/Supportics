@@ -2197,7 +2197,7 @@ footer {
   .wide {
     width: 55vw;
   }
-  .faq-container{
+  .faq-container {
     flex-direction: column;
   }
   .faq-item {
@@ -2209,10 +2209,64 @@ footer {
   .object img {
     right: 45%;
   }
-.getqoute h1{
-  width: 90vw;
+  .getqoute h1 {
+    width: 90vw;
+  }
+  .secondinr {
+    padding: 50px 50px 0px 50px;
+  }
 }
-.secondinr{
-  padding: 50px 50px 0px 50px;
-}
+@media (max-width: 1440px) {
+  .trial {
+    width: 95vw;
+  }
+  .trial button {
+    width: 40vw !important;
+  }
+  select {
+    width: 50vw;
+  }
+  .upper {
+    width: 130px;
+    font-size: 10px;
+  }
+  .upper2 {
+    margin-left: 5rem;
+  }
+  .upper {
+    margin-left: 9rem;
+    margin-top: 7.5rem;
+  }
+  .upper3 {
+    margin-left: 18rem;
+  }
+  .left p {
+    width: 80vw;
+  }
+  .whitey {
+    padding: 10px 10px 10px 10px;
+    border-radius: 12px;
+  }
+  .whitey h1 {
+    font-size: 32px;
+  }
+  .whitey p {
+    font-size: 12px;
+  }
+  .greeni {
+    height: 60px;
+  }
+  .service {
+    padding: 20px;
+  }
+  h3 {
+    font-size: 15px;
+    line-height: 20px;
+  }
+  .section-inner {
+    margin-top: 550%;
+  }
+  .assist {
+    margin-top: 500%;
+  }
 }
