@@ -8,6 +8,7 @@ html,
 body {
   width: 100%;
   height: 100%;
+   overflow-x: hidden !important;
 }
 body {
   overflow-x: hidden !important;
@@ -2336,6 +2337,9 @@ footer {
   .trial button a{
     font-size: 12px;
   }
+      .inner p {
+        width: 80vw;
+    }
   .upper2{
 width: 32px;
 height: 32px;
@@ -2348,5 +2352,22 @@ margin-top: 8rem;
 width: 32px;
 height: 32px;
 margin-left:16.5rem;
+  }
+  .service{
+    gap: 20px;
+  }
+  .section-inner{
+    margin-top: 390%;
+  }
+  .assist{
+    margin-top: 330%;
+  }
+  .assist a{
+    width: 62vw;
+  }
+  .blogs{
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
   }
 }
