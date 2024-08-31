@@ -2216,7 +2216,7 @@ footer {
     padding: 50px 50px 0px 50px;
   }
 }
-@media (max-width: 1440px) {
+@media (max-width: 425px) {
   .trial {
     width: 95vw;
   }
@@ -2264,9 +2264,86 @@ footer {
     line-height: 20px;
   }
   .section-inner {
-    margin-top: 550%;
+    margin-top: 320%;
+    padding: 20px;
+  }
+  .card {
+    width: 80vw;
   }
   .assist {
-    margin-top: 500%;
+    margin-top: 270%;
+  }
+      .live-chat {
+        width: 40vw;
+        height: 20vh;
+    }
+  .assist h1 {
+    width: 80vw;
+    text-align: center;
+  }
+  .section-inner h1 {
+    width: 80vw;
+  }
+  .eight-section h1 {
+    text-align: center;
+  }
+  .testimonial-slider {
+    padding: 20px;
+  }
+  .testimonial blockquote {
+    font-size: 18px;
+    line-height: 30px;
+  }
+  .colb {
+    margin-left: 1%;
+  }
+  .wifi {
+    width: 90vw;
+  }
+  .blogs {
+    padding: 20px;
+  }
+  .sliders {
+    padding: 20px;
+  }
+  .cardss {
+    width: 90vw;
+  }
+  .wide {
+    width: 80vw;
+  }
+  .buttons {
+    margin-left: 10rem;
+  }
+  .FAQS{
+    padding: 20px;
+  }
+  .faq-question{
+    font-size: 18px;
+  }
+  .object img{
+    right: 5%;
+  }
+  .object svg{
+    width: 400px;
+  }
+}
+
+@media (max-width: 375px){
+  .trial button a{
+    font-size: 12px;
+  }
+  .upper2{
+width: 32px;
+height: 32px;
+margin-top: 8rem;
+  }
+  .upper{
+    margin-left: 8rem;
+  }
+  .upper3{
+width: 32px;
+height: 32px;
+margin-left:16.5rem;
   }
 }
