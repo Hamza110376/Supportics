@@ -1,379 +1,870 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>faqs</title>
     <style>
-        .faq-container {
-            width: 95vw;
+      .faq-container {
+        width: 95vw;
 
-            background-color: #f2f5f9;
-            border-radius: 16px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-            padding: 50px;
-        }
+        background-color: #f2f5f9;
+        border-radius: 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 50px;
+      }
 
-        .tabs-wrapper {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 20px;
-        }
+      .tabs-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
 
-        .topic-label {
-            color: var(--Base-Base-Black, #036);
-            font-family: Gilroy;
-            font-size: 18px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: normal;
-        }
+      .topic-label {
+        color: var(--Base-Base-Black, #036);
+        font-family: Gilroy;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
 
-        .tabs {
-            display: flex;
-            gap: 10px;
-        }
+      .tabs {
+        display: flex;
+        gap: 10px;
+      }
 
-        .tab {
-            display: flex;
-            height: 40px;
-            padding: 8px 10px;
-            justify-content: center;
-            align-items: center;
-            border-radius: 44px;
-            color: var(--Base-Base-Black, #036);
-            text-align: center;
-            font-family: Gilroy;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 600;
-            line-height: normal;
-            letter-spacing: -0.16px;
+      .tab {
+        display: flex;
+        height: 40px;
+        padding: 8px 10px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 44px;
+        color: var(--Base-Base-Black, #036);
+        text-align: center;
+        font-family: Gilroy;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        letter-spacing: -0.16px;
+      }
 
-        }
+      .tab.active {
+        background-color: #007bff;
+        color: white;
+        border-color: transparent;
+        color: var(--Asklepios-Gray-White, var(--White, #fff));
+        text-align: center;
+        font-family: Gilroy;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        letter-spacing: -0.16px;
+      }
 
-        .tab.active {
-            background-color: #007bff;
-            color: white;
-            border-color: transparent;
-            color: var(--Asklepios-Gray-White, var(--White, #FFF));
-            text-align: center;
-            font-family: Gilroy;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 600;
-            line-height: normal;
-            letter-spacing: -0.16px;
-        }
+      .faq-item {
+        background-color: transparent;
+        background: var(--Base-Base-White, #fafafa);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 24px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        padding: 0px;
+        border-radius: 8px;
+      }
 
-        .faq-item {
-            background-color: transparent;
-            background: var(--Base-Base-White, #fafafa);
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 24px;
-            margin-bottom: 10px;
-            border-radius: 10px;
-            padding: 0px;
-            border-radius: 8px;
-        }
+      .faq-content {
+        background-color: #f2f5f9;
+      }
 
-        .faq-content {
-            background-color: #f2f5f9;
-        }
+      .faq-question {
+        padding: 15px;
+        background-color: transparent;
+        border: none;
+        text-align: left;
+        width: 100%;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
 
-        .faq-question {
-            padding: 15px;
-            background-color: transparent;
-            border: none;
-            text-align: left;
-            width: 100%;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+      .arrow {
+        font-size: 12px;
+        transition: transform 0.3s;
+      }
 
-        .arrow {
-            font-size: 12px;
-            transition: transform 0.3s;
-        }
+      .faq-item.active .arrow {
+        transform: rotate(180deg);
+      }
 
-        .faq-item.active .arrow {
-            transform: rotate(180deg);
-        }
+      .faq-question:hover {
+        background-color: #f0f0f0;
+      }
 
-        .faq-question:hover {
-            background-color: #f0f0f0;
-        }
+      .faq-answer {
+        display: none;
+        padding: 15px;
+        background-color: var(--Base-Base-Black, #036);
+        color: white;
+        border-radius: 0 0 10px 10px;
+      }
 
-        .faq-answer {
-            display: none;
-            padding: 15px;
-            background-color: var(--Base-Base-Black, #036);
-            color: white;
-            border-radius: 0 0 10px 10px;
-        }
+      .faq-item.active .faq-question {
+        background-color: var(--Base-Base-Black, #036);
+        color: white;
+      }
 
-        .faq-item.active .faq-question {
-            background-color: var(--Base-Base-Black, #036);
-            color: white;
-        }
-
-        .faq-item.active .faq-answer {
-            display: block;
-        }
+      .faq-item.active .faq-answer {
+        display: block;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="main">
-        <nav>
-            <img src="./assets/Layer_1.png" alt="logo" />
-            <ul>
-                <li>
-                    <a href="./Home.html">
-                        <span> <img src="./assets/elements.png" alt="" /> </span> Home</a>
-                </li>
-                <li><a href="./Services.html">Services</a></li>
-                <li><a href="./industries.html">Industries</a></li>
-                <li><a href="./aboutus.html">About Us</a></li>
-                <li><a href="./blogs.html">Blogs</a></li>
-                <li><a href="./contact.html">Contact</a></li>
-            </ul>
+      <nav>
+        <img src="./assets/Layer_1.png" alt="logo" />
+        <ul>
+          <li>
+            <a href="./Home.html">
+              <span> <img src="./assets/elements.png" alt="" /> </span> Home</a
+            >
+          </li>
+          <li><a href="./Services.html">Services</a></li>
+          <li><a href="./industries.html">Industries</a></li>
+          <li><a href="./aboutus.html">About Us</a></li>
+          <li><a href="./blogs.html">Blogs</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
 
-            <div class="btn">
-                <button class="numbr">
-                    <span> <img src="./assets/elements2.png" /> </span>
-                    <a href="#">+1 23 4567 89</a>
-                </button>
-                <button class="qoute"><a href="#">Get A Quote</a></button>
+        <div class="btn">
+          <button class="numbr">
+            <span> <img src="./assets/elements2.png" /> </span>
+            <a href="#">+1 23 4567 89</a>
+          </button>
+          <button class="qoute"><a href="#">Get A Quote</a></button>
+        </div>
+      </nav>
+      <div class="faqs">
+        <h1>Frequently Asked Questions</h1>
+        <div class="see-all">
+          <p>
+            Have any questions or still unsure about our proudct? We have all of
+            the answers covered.
+          </p>
+          <a href="#"
+            >See All FAQ’s
+            <span class="arow"
+              ><img src="./assets/Monotone add2.png" alt="" /></span
+          ></a>
+        </div>
+      </div>
+      <div class="main-faqs">
+        <div class="faq-container">
+          <div class="tabs-wrapper">
+            <div class="topic-label">Topic</div>
+            <div class="tabs">
+              <button class="tab active" data-topic="general-info">
+                General Services
+              </button>
+              <button class="tab" data-topic="call-services">
+                Call Services
+              </button>
+              <button class="tab" data-topic="Technical-Support">
+                Technical and Help Desk Support
+              </button>
+              <button class="tab" data-topic="bpo-services">
+                BPO Services
+              </button>
+              <button class="tab" data-topic="email-support">
+                Email and Ticket Support
+              </button>
+              <button class="tab" data-topic="disaster-service">
+                Disaster Recovery and Business Continuity
+              </button>
+              <button class="tab" data-topic="Industry-Specific">
+                Industry-Specific Solutions
+              </button>
+              <button class="tab" data-topic="Customer-experience">
+                Customer Experience and Quality Assurance
+              </button>
+              <button class="tab" data-topic="pricing-faqs">
+                Pricing and Contracts
+              </button>
+              <!-- Add more tabs as needed -->
             </div>
-        </nav>
-        <div class="faqs">
-            <h1>Frequently Asked Questions</h1>
-            <div class="see-all">
+          </div>
+
+          <div class="faq-content">
+            <div class="faq-item" data-topic="general-info">
+              <button class="faq-question">
+                What services do you provide?
+                <span class="arrow">&#9660;</span>
+              </button>
+              <div class="faq-answer">
                 <p>
-                    Have any questions or still unsure about our proudct? We have all of
-                    the answers covered.
+                  We offer a variety of services like phone answering, 24/7
+                  support, click-to-talk support, BPO services, ticket support,
+                  and disaster recovery.
                 </p>
-                <a href="#">See All FAQ’s
-                    <span class="arow"><img src="./assets/Monotone add2.png" alt="" /></span></a>
+              </div>
             </div>
-        </div>
-        <div class="main-faqs">
-            <div class="faq-container">
-                <div class="tabs-wrapper">
-                    <div class="topic-label">Topic</div>
-                    <div class="tabs">
-                        <button class="tab active" data-topic="general-info">
-                            General Information
-                        </button>
-                        <button class="tab" data-topic="service-features">
-                            Service Features
-                        </button>
-                        <!-- Add more tabs as needed -->
-                    </div>
-                </div>
-
-                <div class="faq-content">
-                    <div class="faq-item" data-topic="general-info">
-                        <button class="faq-question">
-                            Can Supportics handle high volumes of customer inquiries?
-                            <span class="arrow">&#9660;</span>
-                        </button>
-                        <div class="faq-answer">
-                            <p>
-                                Yes, Supportics is equipped to manage high volumes of customer
-                                inquiries efficiently through its various support channels,
-                                including Live Chat, Phone Answering, and Email Support.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="faq-item" data-topic="general-info">
-                        <button class="faq-question">
-                            How quickly can Supportics start supporting my customers?
-                            <span class="arrow">&#9660;</span>
-                        </button>
-                        <div class="faq-answer">
-                            <p>
-                                Supportics can begin supporting your customers shortly after
-                                the initial setup and onboarding process, which is designed to
-                                be quick and efficient.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="faq-item" data-topic="general-info">
-                        <button class="faq-question">
-                            How will Supportics understand my offerings?
-                            <span class="arrow">&#9660;</span>
-                        </button>
-                        <div class="faq-answer">
-                            <p>
-                                Supportics conducts thorough training sessions and works
-                                closely with you to understand your products, services, and
-                                customer interaction requirements, ensuring accurate and
-                                helpful support..
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item" data-topic="general-info">
-                        <button class="faq-question">
-                            How do I get the chat working on my website?
-                            <span class="arrow">&#9660;</span>
-                        </button>
-                        <div class="faq-answer">
-                            <p>
-                                Supportics provides a simple integration process with detailed
-                                instructions to get the live chat feature up and running on
-                                your website.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item" data-topic="general-info">
-                        <button class="faq-question">
-                            Do you offer an account manager, and what is their role?
-                            <span class="arrow">&#9660;</span>
-                        </button>
-                        <div class="faq-answer">
-                            <p>
-                                Yes, Supportics assigns an account manager to each client. The
-                                account manager's role is to ensure smooth communication,
-                                address any concerns, and help optimize the support services
-                                provided..
-                            </p>
-                        </div>
-                    </div>
-                    <!-- Add more FAQ items here -->
-                    <!-- service-info faqs are here -->
-                    <div class="faq-item" data-topic="service-features">
-                        <button class="faq-question">
-                            Will my customers notice they're talking to an outsourced team?
-                            <span class="arrow">&#9660;</span>
-                        </button>
-                        <div class="faq-answer">
-                            <p>
-                                No, Supportics ensures that all agents are well-trained and
-                                familiar with your company's policies and products, providing
-                                seamless and professional customer interactions.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="faq-item" data-topic="service-features">
-                        <button class="faq-question">
-                            Can I monitor the performance of the outsourced customer
-                            support?
-                            <span class="arrow">&#9660;</span>
-                        </button>
-                        <div class="faq-answer">
-                            <p>
-                                Yes, Supportics provides detailed performance reports and
-                                analytics, allowing you to monitor the effectiveness and
-                                quality of the customer support services.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="faq-item" data-topic="service-features">
-                        <button class="faq-question">
-                            Is my information secure with Supportics?
-                            <span class="arrow">&#9660;</span>
-                        </button>
-                        <div class="faq-answer">
-                            <p>
-                                Yes, Supportics prioritizes data security and employs
-                                stringent measures to protect your information, ensuring
-                                confidentiality and compliance with relevant regulations.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="faq-item" data-topic="service-features">
-                        <button class="faq-question">
-                            What happens after the free trial with Supportics?
-                            <span class="arrow">&#9660;</span>
-                        </button>
-                        <div class="faq-answer">
-                            <p>
-                                After the free trial, you can choose from various support
-                                packages offered by Supportics based on your needs and
-                                continue benefiting from their services without interruption.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="faq-item" data-topic="service-features">
-                        <button class="faq-question">
-                            Can I self-chat with my website visitors using Supportics?
-                            <span class="arrow">&#9660;</span>
-                        </button>
-                        <div class="faq-answer">
-                            <p>
-                                Yes, Supportics allows you to interact directly with your
-                                website visitors through the chat feature if you prefer to
-                                manage certain interactions personally.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="more-question">
-                    <h3>More Questions?</h3>
-                    <a href="#">Chat with us <span class="arow"><img src="./assets/6.png" alt=""></span> </a>
-                </div>
+            <div class="faq-item" data-topic="general-info">
+              <button class="faq-question">
+                How does your 24/7 support work?
+                <span class="arrow">&#9660;</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Our 24/7 support means we’re available to help your customers
+                  at any time, day or night, all year round.
+                </p>
+              </div>
             </div>
+            <div class="faq-item" data-topic="general-info">
+              <button class="faq-question">
+                What is Click-to-Talk support?
+                <span class="arrow">&#9660;</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Click-to-Talk support lets your customers connect with a
+                  support agent instantly from your website or app.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item" data-topic="general-info">
+              <button class="faq-question">
+                Can you help with disaster recovery and business continuity?
+                <span class="arrow">&#9660;</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Yes, we provide services to keep your business running
+                  smoothly during unexpected situations.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item" data-topic="general-info">
+              <button class="faq-question">
+                Which industries do you work with?
+                <span class="arrow">&#9660;</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  We work with many industries, including healthcare,
+                  e-commerce, finance, technology, and automotive.
+                </p>
+              </div>
+            </div>
+            <!-- Add more FAQ items here -->
+            <!-- call services faqs are here -->
+            <div class="faq-item" data-topic="call-services">
+              <button class="faq-question">
+                How does your phone answering service work?
+                <span class="arrow">&#9660;</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Our trained agents answer calls for your business, following
+                  your instructions to make sure your customers get the same
+                  great service every time.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item" data-topic="call-services">
+              <button class="faq-question">
+                Is your phone answering service available 24/7?
+                <span class="arrow">&#9660;</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Yes, our service is available 24/7, so your business is always
+                  reachable.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item" data-topic="call-services">
+              <button class="faq-question">
+                Can you handle a lot of calls at once?
+                <span class="arrow">&#9660;</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Yes, we can manage high call volumes efficiently, making sure
+                  no call is missed.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item" data-topic="call-services">
+              <button class="faq-question">
+                Do you offer services in multiple languages?
+                <span class="arrow">&#9660;</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Yes, we provide phone answering services in multiple languages
+                  to support your diverse customers.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item" data-topic="call-services">
+              <button class="faq-question">
+                How do you maintain the quality of your service?
+                <span class="arrow">&#9660;</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  We maintain high quality through thorough training, regular
+                  checks, and ongoing evaluations of our agents.
+                </p>
+              </div>
+            </div>
+            <!-- Technical and Help Desk Support faqs starts here -->
+
+            <div class="faq-item" data-topic="Technical-Support">
+              <button class="faq-question">
+                What does your technical support cover?
+                <span class="arrow">&#9660;</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Our technical support includes troubleshooting, software help,
+                  network support, and more, customized to fit your business
+                  needs.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item" data-topic="Technical-Support">
+              <button class="faq-question">
+                Can your help desk handle tough technical problems?
+
+                <span class="arrow">&#9660;</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Yes, our skilled technicians can resolve even the most complex
+                  technical issues quickly and efficiently.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item" data-topic="Technical-Support">
+              <button class="faq-question">
+                Do you offer IT support for small businesses?
+
+                <span class="arrow">&#9660;</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Yes, we provide IT support that can be scaled to fit
+                  businesses of any size, from small startups to large
+                  companies.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item" data-topic="Technical-Support">
+              <button class="faq-question">
+                How do you manage support tickets?
+
+                <span class="arrow">&#9660;</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  We use a sophisticated ticketing system to track and manage
+                  support requests, ensuring issues are resolved promptly and
+                  efficiently.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item" data-topic="Technical-Support">
+              <button class="faq-question">
+                Do you offer technical support for SaaS companies?
+
+                <span class="arrow">&#9660;</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Yes, we specialize in supporting SaaS companies with services
+                  like onboarding, troubleshooting, and customer support.
+                </p>
+              </div>
+            </div>
+
+            <!-- BPO services section starts here -->
+
+            <div class="faq-item" data-topic="bpo-services">
+              <button class="faq-question">
+                What BPO services do you offer?
+
+                <span class="arrow">&#9660;</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  We provide a wide range of BPO services like customer support,
+                  data entry, and back-office operations to boost your business
+                  efficiency.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item" data-topic="bpo-services">
+              <button class="faq-question">
+                How can BPO services help my business?
+                <span class="arrow">&#9660;</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Our BPO services can lower your costs, improve efficiency, and
+                  let your team focus on what they do best.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item" data-topic="bpo-services">
+              <button class="faq-question">
+                Can you customize BPO solutions for my industry?
+
+                <span class="arrow">&#9660;</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Yes, we tailor our BPO services to fit the specific needs of
+                  various industries, including healthcare, finance, and
+                  technology.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item" data-topic="bpo-services">
+              <button class="faq-question">
+                How do you ensure data security in BPO services?
+
+                <span class="arrow">&#9660;</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  We follow strict data security practices like encryption,
+                  access controls, and regular audits to keep your information
+                  safe.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item" data-topic="bpo-services">
+              <button class="faq-question">
+                Are your BPO services scalable?
+
+                <span class="arrow">&#9660;</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Yes, our BPO services are fully scalable, so you can adjust
+                  them as your business grows or changes.
+                </p>
+              </div>
+            </div>
+
+            <!-- email support service starts here -->
+            <div class="faq-item" data-topic="email-support">
+              <button class="faq-question">
+                How does your email support service work?
+
+                <span class="arrow">&#9660;</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Our email support service manages customer inquiries via
+                  email, providing quick and accurate responses to keep your
+                  customers happy.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item" data-topic="email-support">
+              <button class="faq-question">
+                What is ticket support and how does it help my business?
+
+                <span class="arrow">&#9660;</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Ticket support is a system for managing customer requests. It
+                  helps organize and prioritize issues, leading to faster
+                  resolutions and better customer experiences.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item" data-topic="email-support">
+              <button class="faq-question">
+                Can you integrate your ticketing system with my CRM?
+
+                <span class="arrow">&#9660;</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Yes, we can integrate our ticketing system with your existing
+                  CRM to create a smooth and unified support experience.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item" data-topic="email-support">
+              <button class="faq-question">
+                How do you handle a large number of email support requests?
+
+                <span class="arrow">&#9660;</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  We handle high volumes using automation, prioritization, and
+                  our skilled team to ensure all requests are answered quickly.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item" data-topic="email-support">
+              <button class="faq-question">
+                Is your email and ticket support available 24/7?
+
+                <span class="arrow">&#9660;</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Yes, our email and ticket support is available 24/7, so your
+                  customers can get help anytime they need it.
+                </p>
+              </div>
+            </div>
+
+            <!-- disaster service faqs starts here -->
+            <div class="faq-item" data-topic="disaster-service">
+              <button class="faq-question">
+                What is disaster recovery, and why is it important?
+
+                <span class="arrow">&#9660;</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Disaster recovery is the process of getting your business back
+                  on track after a major event. It’s essential to reduce
+                  downtime and protect your business from financial losses.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item" data-topic="disaster-service">
+              <button class="faq-question">
+                How do you keep business running during a disaster?
+
+                <span class="arrow">&#9660;</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  We use strong business continuity plans, including data
+                  backups, redundant systems, and quick-response teams to keep
+                  your operations going with minimal disruption.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item" data-topic="disaster-service">
+              <button class="faq-question">
+                Can you create a disaster recovery plan just for my business?
+
+                <span class="arrow">&#9660;</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Yes, we work with you to create a custom disaster recovery
+                  plan that fits your business’s specific needs and risks.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item" data-topic="disaster-service">
+              <button class="faq-question">
+                What kind of support do you offer during a disaster?
+
+                <span class="arrow">&#9660;</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  We provide full support, including emergency communication,
+                  system recovery, and working with your team to restore normal
+                  operations quickly.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item" data-topic="disaster-service">
+              <button class="faq-question">
+                How often do you test your disaster recovery systems?
+
+                <span class="arrow">&#9660;</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  We regularly test and simulate our disaster recovery systems
+                  to make sure they’re effective and up-to-date.
+                </p>
+              </div>
+            </div>
+
+            <!-- industry specific services  -->
+            <div class="faq-item" data-topic="Industry-Specific">
+              <button class="faq-question">
+                Do you offer services for the e-commerce industry?
+
+                <span class="arrow">&#9660;</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Yes, we specialize in e-commerce services like order
+                  processing, customer support, and returns management to help
+                  you provide a smooth shopping experience.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item" data-topic="Industry-Specific">
+              <button class="faq-question">
+                What solutions do you provide for the healthcare industry?
+
+                <span class="arrow">&#9660;</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  For healthcare, we offer patient support, appointment
+                  scheduling, billing inquiries, and more, all while complying
+                  with regulations like HIPAA.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item" data-topic="Industry-Specific">
+              <button class="faq-question">
+                How can your services help the automotive industry?
+
+                <span class="arrow">&#9660;</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  We support automotive businesses with customer service, parts
+                  inquiries, warranty support, and more to boost customer
+                  loyalty and efficiency.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item" data-topic="Industry-Specific">
+              <button class="faq-question">
+                What support do you offer for the technology sector?
+
+                <span class="arrow">&#9660;</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  We provide technical support, product help desk, and customer
+                  onboarding services tailored for tech companies.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item" data-topic="Industry-Specific">
+              <button class="faq-question">
+                Do you have experience with financial institutions?
+
+                <span class="arrow">&#9660;</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Yes, we offer services like customer support, account
+                  management, and fraud prevention specifically for the finance
+                  and banking sectors.
+                </p>
+              </div>
+            </div>
+
+            <!-- Customer Experience and Quality Assurance starts here -->
+            <div class="faq-item" data-topic="Customer-experience">
+              <button class="faq-question">
+                How do you ensure high-quality customer service?
+
+                <span class="arrow">&#9660;</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  We ensure high-quality service through ongoing training,
+                  regular quality checks, and analyzing customer feedback to
+                  keep our agents performing at their best.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item" data-topic="Customer-experience">
+              <button class="faq-question">
+                Can you match your customer service to my brand?
+
+                <span class="arrow">&#9660;</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Yes, we can customize scripts, workflows, and communication
+                  styles to align perfectly with your brand’s voice and values.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item" data-topic="Customer-experience">
+              <button class="faq-question">
+                How do you handle customer complaints?
+
+                <span class="arrow">&#9660;</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  We take complaints seriously, resolving them quickly and
+                  effectively to improve customer satisfaction.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item" data-topic="Customer-experience">
+              <button class="faq-question">
+                What metrics do you use to measure customer service?
+
+                <span class="arrow">&#9660;</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  We use key metrics like customer satisfaction scores (CSAT),
+                  first call resolution (FCR), and average handling time (AHT)
+                  to measure and enhance service quality.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item" data-topic="Customer-experience">
+              <button class="faq-question">
+                Do you provide regular reports on service performance?
+
+                <span class="arrow">&#9660;</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Yes, we provide detailed reports that highlight successes and
+                  identify areas for improvement.
+                </p>
+              </div>
+            </div>
+            <!-- pricing faqs -->
+            <div class="faq-item" data-topic="pricing-faqs">
+              <button class="faq-question">
+                How is pricing determined for your services?
+
+                <span class="arrow">&#9660;</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Pricing depends on the services you need, the amount of
+                  support required, and any customizations. We offer competitive
+                  rates tailored to your business.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item" data-topic="pricing-faqs">
+              <button class="faq-question">
+                Do you offer flexible contract terms?
+
+                <span class="arrow">&#9660;</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Yes, we provide flexible contract options to fit your needs,
+                  whether you’re looking for short-term support or a long-term
+                  partnership.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item" data-topic="pricing-faqs">
+              <button class="faq-question">
+                Are there any hidden fees?
+
+                <span class="arrow">&#9660;</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  No, our pricing is transparent. All costs are clearly listed
+                  in the contract with no hidden fees.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item" data-topic="pricing-faqs">
+              <button class="faq-question">
+                Can I scale the services up or down as needed?
+
+                <span class="arrow">&#9660;</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Yes, our services are fully scalable, so you can adjust the
+                  level of support as your needs change.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="more-question">
+            <h3>More Questions?</h3>
+            <a href="#"
+              >Chat with us
+              <span class="arow"><img src="./assets/6.png" alt="" /></span>
+            </a>
+          </div>
         </div>
+      </div>
     </div>
-    <footer>
-
-    </footer>
+    <footer></footer>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const tabs = document.querySelectorAll(".tab");
-            const faqItems = document.querySelectorAll(".faq-item");
+      document.addEventListener("DOMContentLoaded", function () {
+        const tabs = document.querySelectorAll(".tab");
+        const faqItems = document.querySelectorAll(".faq-item");
 
-            function showFaqsForActiveTab() {
-                const activeTab = document.querySelector(".tab.active");
-                const activeTopic = activeTab.getAttribute("data-topic");
+        function showFaqsForActiveTab() {
+          const activeTab = document.querySelector(".tab.active");
+          const activeTopic = activeTab.getAttribute("data-topic");
 
-                faqItems.forEach(item => {
-                    if (item.getAttribute("data-topic") === activeTopic) {
-                        item.style.display = "block";
-                    } else {
-                        item.style.display = "none";
-                    }
-                });
+          faqItems.forEach((item) => {
+            if (item.getAttribute("data-topic") === activeTopic) {
+              item.style.display = "block";
+            } else {
+              item.style.display = "none";
             }
+          });
+        }
 
-            tabs.forEach(tab => {
-                tab.addEventListener("click", function () {
-                    tabs.forEach(t => t.classList.remove("active"));
-                    tab.classList.add("active");
+        tabs.forEach((tab) => {
+          tab.addEventListener("click", function () {
+            tabs.forEach((t) => t.classList.remove("active"));
+            tab.classList.add("active");
 
-                    showFaqsForActiveTab();
-                });
-            });
-
-            const faqQuestions = document.querySelectorAll(".faq-question");
-
-            faqQuestions.forEach(question => {
-                question.addEventListener("click", function () {
-                    const faqItem = question.parentElement;
-                    faqItem.classList.toggle("active");
-                });
-            });
-
-            // Call the function to show the correct FAQs on page load
             showFaqsForActiveTab();
+          });
         });
 
-    </script>
-</body>
+        const faqQuestions = document.querySelectorAll(".faq-question");
 
+        faqQuestions.forEach((question) => {
+          question.addEventListener("click", function () {
+            const faqItem = question.parentElement;
+            faqItem.classList.toggle("active");
+          });
+        });
+
+        // Call the function to show the correct FAQs on page load
+        showFaqsForActiveTab();
+      });
+    </script>
+  </body>
 </html>

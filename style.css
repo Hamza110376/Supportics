@@ -16,6 +16,7 @@ body {
 .main {
   width: 100vw;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 nav {
   width: 100vw;
@@ -1083,7 +1084,6 @@ select {
 }
 .contact {
   width: 100vw;
-  height: 100vh;
   padding: 50px;
   display: flex;
   gap: 40px;
@@ -1149,7 +1149,7 @@ select {
 }
 .main-form {
   width: 70vw;
-  height: 78.5vh;
+
   border-radius: 24px;
   background: #f2f5f9;
   display: flex;
@@ -1495,6 +1495,7 @@ input[type="checkbox"] {
   align-items: flex-end;
   justify-content: space-between;
   flex-direction: column;
+  gap: 20px;
 }
 .see-all p {
   color: var(--H2, #6d758f);
@@ -2122,7 +2123,33 @@ footer {
     width: 12vw;
   }
 }
-
+@media (max-width: 996px) {
+  .faqs h1 {
+    width: 25vw;
+  }
+}
+@media (max-width: 866px) {
+  .search-container input {
+    width: 60vw;
+  }
+  .blog-card {
+    width: 70vw;
+  }
+  .read-more-btn {
+    width: 65vw;
+  }
+}
+@media (max-width: 796px) {
+  .faqs {
+    padding: 50px 30px;
+  }
+  .faqs h1 {
+    font-size: 48px;
+  }
+  .see-all p {
+    width: 25vw;
+  }
+}
 @media (max-width: 768px) {
   nav {
     display: none;
@@ -2215,7 +2242,39 @@ footer {
   .secondinr {
     padding: 50px 50px 0px 50px;
   }
+  .search-container input {
+    width: 50vw;
+  }
 }
+@media (max-width: 606px) {
+  .faqs {
+    padding: 50px 30px;
+  }
+  .faqs h1 {
+    width: 35vw;
+  }
+}
+@media (max-width: 575px) {
+  .see-all p {
+    width: 35vw;
+  }
+  .tab {
+    font-size: 12px;
+  }
+  .blog-card {
+    width: 90vw;
+  }
+  .read-more-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 525px) {
+  .search-container input {
+    width: 50vw;
+  }
+}
+
 @media (max-width: 425px) {
   .trial {
     width: 95vw;
@@ -2273,10 +2332,10 @@ footer {
   .assist {
     margin-top: 270%;
   }
-      .live-chat {
-        width: 40vw;
-        height: 20vh;
-    }
+  .live-chat {
+    width: 40vw;
+    height: 20vh;
+  }
   .assist h1 {
     width: 80vw;
     text-align: center;
@@ -2315,56 +2374,70 @@ footer {
   .buttons {
     margin-left: 10rem;
   }
-  .FAQS{
+  .FAQS {
     padding: 20px;
   }
-  .faq-question{
+  .faq-question {
     font-size: 18px;
   }
-  .object img{
+  .object img {
     right: 5%;
   }
-  .object svg{
+  .object svg {
     width: 400px;
   }
-    .trial button a{
+  .trial button a {
     font-size: 12px;
   }
+  .faqs {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.faqs h1{
+  font-size: 40px;
+}
+    .see-all p {
+        width: 40vw;
+        font-size: 16px;
+    }
 }
 
-@media (max-width: 375px){
-  .trial button a{
+@media (max-width: 375px) {
+  .trial button a {
     font-size: 12px;
   }
-      .inner p {
-        width: 80vw;
-    }
-  .upper2{
-width: 32px;
-height: 32px;
-margin-top: 8rem;
+  .inner p {
+    width: 80vw;
   }
-  .upper{
+  .upper2 {
+    width: 32px;
+    height: 32px;
+    margin-top: 8rem;
+  }
+  .upper {
     margin-left: 8rem;
   }
-  .upper3{
-width: 32px;
-height: 32px;
-margin-left:16.5rem;
+  .upper3 {
+    width: 32px;
+    height: 32px;
+    margin-left: 16.5rem;
   }
-  .service{
+  .service {
     gap: 20px;
   }
-  .section-inner{
+  .section-inner {
     margin-top: 390%;
   }
-  .assist{
+  .assist {
     margin-top: 330%;
   }
-  .assist a{
+  .assist a {
     width: 62vw;
   }
-  .blogs{
+  .blogs {
     flex-direction: column;
     gap: 10px;
     align-items: flex-start;
