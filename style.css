@@ -2547,7 +2547,7 @@ footer {
       right: 5%;
     }
     .object svg {
-      width: 450px;
+      width: 400px;
     }
     .trial button a {
       font-size: 12px;
@@ -2566,10 +2566,151 @@ footer {
       width: 40vw;
       font-size: 16px;
     }
+    .getqoute {
+      padding: 30px;
+    }
   }
 
   /* Very small devices (less than 360px) */
-  @media (max-width: 359.98px) {
+  @media (max-width: 426px) {
+    .trial {
+      width: 95vw;
+    }
+    .trial button {
+      width: 35% !important;
+    }
+    .inner h1 {
+      font-size: 30px !important;
+    }
+    .Customer {
+      font-size: 30px !important;
+    }
+    .inner p {
+      font-size: 14px;
+      width: 90vw;
+    }
+    select {
+      width: 60vw;
+    }
+    .upper {
+      width: 130px;
+      font-size: 10px;
+    }
+    .upper2 {
+      margin-left: 5rem;
+    }
+    .upper {
+      margin-left: 9rem;
+      margin-top: 7.5rem;
+    }
+    .upper3 {
+      margin-left: 18rem;
+    }
+    .left p {
+      width: 80vw;
+    }
+    .whitey {
+      padding: 10px 10px 10px 10px;
+      border-radius: 12px;
+    }
+    .whitey h1 {
+      font-size: 32px;
+    }
+    .whitey p {
+      font-size: 12px;
+    }
+    .greeni {
+      height: 60px;
+    }
+    .service {
+      padding: 20px;
+    }
+    h3 {
+      font-size: 15px;
+      line-height: 20px;
+    }
+    .section-inner {
+      margin-top: 390% !important;
+      padding: 20px;
+    }
+    .card {
+      width: 80vw;
+    }
+    .assist {
+      margin-top: 380% !important;
+    }
+    .live-chat {
+      width: 40vw;
+      height: 20vh;
+    }
+    .assist h1 {
+      width: 80vw;
+      text-align: center;
+    }
+    .section-inner h1 {
+      width: 80vw;
+    }
+    .eight-section h1 {
+      text-align: center;
+    }
+    .testimonial-slider {
+      padding: 20px;
+      height: 115vh;
+    }
+    .testimonial blockquote {
+      font-size: 18px;
+      line-height: 30px;
+    }
+    .colb {
+      margin-left: 7% !important;
+    }
+    .wifi {
+      width: 90vw;
+    }
+    .blogs {
+      padding: 20px;
+    }
+    .sliders {
+      padding: 20px;
+    }
+    .cardss {
+      width: 90vw;
+    }
+    .wide {
+      width: 80vw;
+    }
+    .buttons {
+      margin-left: 15rem !important;
+    }
+    .FAQS {
+      padding: 20px;
+    }
+    .faq-question {
+      font-size: 18px;
+    }
+    .object img {
+      right: 5%;
+    }
+    .object svg {
+      width: 400px;
+    }
+    .trial button a {
+      font-size: 12px;
+    }
+    .faqs {
+      width: 100vw;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .faqs h1 {
+      font-size: 40px;
+    }
+    .see-all p {
+      width: 40vw;
+      font-size: 16px;
+    }
   }
 }
 
