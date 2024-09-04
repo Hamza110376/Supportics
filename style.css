@@ -151,6 +151,7 @@ nav ul li a:is(:link, :active, :visited).active {
   font-size: 64px;
   font-style: normal;
   font-weight: 700;
+  text-align: center;
   line-height: 103%;
   /* 65.92px */
   letter-spacing: -3.2px;
@@ -178,6 +179,7 @@ nav ul li a:is(:link, :active, :visited).active {
 }
 .trial {
   height: 6vh;
+
   border-radius: 32px;
   border: 1px solid var(--Blue-LT, #e3efff);
   background: var(--Base-Base-White, #fafafa);
@@ -204,7 +206,7 @@ select {
 
 .trial button {
   display: flex;
-  width: 9vw;
+  width: 70%;
   height: 6vh;
   padding: 12px 17.5px 12px 17px;
   align-items: center;
@@ -265,7 +267,6 @@ select {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: -40px;
 }
 .logos h3 {
   color: var(--Neutrals-Neutrals700, #ababab);
@@ -443,7 +444,7 @@ select {
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: flex-start;
-  gap: 40px;
+  gap: 20px;
   padding: 50px;
 }
 .service a {
@@ -498,7 +499,7 @@ select {
   width: 95vw;
   border-radius: 24px;
   background: var(--Base-Base-Black, #036);
-  padding: 165px;
+  padding: 130px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -912,7 +913,6 @@ select {
 }
 
 .wide {
-  width: 23vw;
   height: 10vh;
   display: flex;
   align-items: flex-end;
@@ -1875,7 +1875,7 @@ input[type="checkbox"] {
   align-items: center;
   border-radius: 9px;
   border: 1px solid var(--Base-Base-Black, #036);
-  width: 5vw;
+  width: 7vw;
   color: var(--Base-Base-Black, #036);
   background: #f2f5f9;
   text-align: center;
@@ -1999,447 +1999,213 @@ footer {
   margin-top: 100px;
 }
 
-@media (max-width: 1440px) {
-  html,
-  body {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-  }
-  body {
-    overflow-x: hidden;
-  }
+/* Very small devices (less than 360px) */
+@media (max-width: 359.98px) {
+  /* Your CSS rules for very small devices (like old or very small phones) */
+}
+
+/* Small devices (portrait phones, less than 480px) */
+@media (max-width: 479.98px) {
+  /* Your CSS rules for small portrait phones */
+}
+
+/* Small devices (landscape phones, less than 600px) */
+@media (max-width: 599.98px) {
+  /* Your CSS rules for small landscape phones */
+}
+
+/* Small to medium devices (portrait tablets and large phones, less than 768px) */
+@media (max-width: 767.98px) {
+  /* Your CSS rules for small tablets and large phones */
+}
+
+/* Medium devices (landscape tablets and small desktops, less than 1024px) */
+@media (max-width: 1024px){
   nav {
-    width: 98vw;
+    width: 100% !important;
+    padding: 20px;
   }
-  nav ul {
-    gap: 30px;
+  nav ul li a {
+    font-size: 12px;
+  }
+  .numbr a {
+    font-size: 12px;
+  }
+  .qoute a {
+    font-size: 12px;
+  }
+  .main-logo {
+    width: 12%;
+    height: 40%;
   }
   .inner p {
-    width: 68vw;
-  }
-  .trial button {
-    width: 13vw !important;
-    height: 5.5vh;
-    gap: 6px;
-  }
-  .logos {
-    margin-top: 30px;
+    width: 70vw;
   }
   .left p {
-    width: 29vw;
+    width: 30vw;
   }
-  .live-chat {
-    width: 28vw;
+  .inner h1 {
+    font-size: 56px;
+  }
+  .inner p {
+    font-size: 16px;
+  }
+ 
+  .achivements-in {
+    padding: 60px 90px 60px 90px;
+  }
+  .left h1 {
+    font-size: 42px;
+  }
+  .whitey {
+    padding: 18px;
+  }
+  .greeni {
+    height: 70px;
+    padding: 18px;
+  }
+  .section-inner {
+    padding: 60px;
+    margin-top: 30% !important;
   }
   .section-inner h1 {
-    width: 70vw;
+    width: 80vw;
     text-align: center;
   }
-  .seventh-section {
-    margin-top: 350px;
+  .card {
+    width: 35vw;
+  }
+  .assist {
+    margin-top: 30% !important;
+  }
+  .live-chat {
+    width: 28vw !important;
+  }
+  h3 {
+    font-size: 1rem !important;
+  }
+  .section-inner {
+    margin-top: 50% !important;
+  }
+  .assist {
+    margin-top: 45% !important;
+  }
+  .headphones {
+    width: 80% !important;
+  }
+  .colb {
+    margin-left: 55% !important;
   }
   .wifi {
-    margin-left: 30% !important;
+    width: 30vw;
+  }
+    .buttons {
+    margin-left: 50rem !important;
+  }
+  .secondinr {
+    gap: 0px !important;
+  }
+  .getqoute h1 {
+    font-size: 40px;
+    line-height: 45px;
+    width: 100%;
+  }
+  .object img {
+    right: 55%;
+  }
+}
+
+/* Medium to large devices (desktops, less than 1200px) */
+@media (min-width: 1272px) and (max-width: 1025px) {
+  nav ul li a {
+    font-size: 12px !important;
+  }
+    .main-logo {
+    width: 12%;
+    height: 60%;
+  }
+  .numbr a {
+    font-size: 12px;
+  }
+  .qoute a {
+    font-size: 12px;
+  }
+  .inner p {
+    width: 70vw;
+  }
+  .left p {
+    width: 30vw;
+  }
+  h3 {
+    font-size: 1.2rem !important;
+  }
+  .achivements-in {
+    padding: 60px 90px 60px 90px;
+  }
+  .section-inner {
+    padding: 60px;
+    margin-top: 30% !important;
+  }
+  .section-inner h1 {
+    width: 80vw;
+    text-align: center;
+  }
+  .card {
+    width: 35vw;
+  }
+  .assist {
+    margin-top: 30% !important;
+  }
+  .colb {
+    margin-left: 58% !important;
+  }
+  .wifi {
+    width: 30vw;
+  }
+  .buttons {
+    margin-left: 60rem !important;
+  }
+  .secondinr {
+    gap: 30px;
+  }
+  .getqoute h1 {
+    font-size: 40px;
+    line-height: 45px;
+  }
+  .object img {
+    right: 55%;
+  }
+}
+
+/* Large devices (large desktops, less than 1400px) */
+@media (min-width: 1399.98px) and (max-width: 1273px){
+  h3 {
+    font-size: 1.5rem;
+  }
+  .live-chat {
+    width: 29vw;
+    gap: 30px;
+  }
+  .section-inner {
+    margin-top: 10%;
+    padding: 100px;
+  }
+  .assist {
+    margin-top: 10%;
   }
   .colb {
     margin-left: 65%;
   }
   .buttons {
-    margin-left: 70rem;
-  }
-  .secondinr {
-    gap: 60px;
-  }
-}
-
-@media (max-width: 1307px) {
-  .trial button {
-    width: 13.5vw !important;
-    height: 5.5vh;
-    gap: 6px;
-  }
-  .card {
-    width: 32vw;
-  }
-  .section-inner {
-    margin-top: 400px;
-  }
-  .live-chat {
-    height: 25vh;
-  }
-  .assist {
-    margin-top: 200px;
-  }
-  .wifi {
-    width: 22vw;
-  }
-  .colb {
-    margin-left: 60%;
-  }
-  .buttons {
-    margin-left: 65rem;
-  }
-}
-@media (max-width: 1307px) {
-  .trial button {
-    width: 14vw !important;
-    height: 5.5vh;
-    gap: 6px;
-  }
-  .card {
-    width: 33vw;
-  }
-  .object img {
-    right: 60%;
-  }
-}
-@media (max-width: 1214px) {
-  .trial button {
-    width: 14.5vw !important;
-    height: 5.5vh;
-    gap: 6px;
-  }
-  .card {
-    width: 33.5vw;
-  }
-  .object img {
-    right: 60%;
-  }
-  .achivements-in {
-    padding: 96px 80px 96px 80px;
-  }
-}
-
-@media (max-width: 1195px) {
-  nav {
-    padding: 20px;
-  }
-  .numbr {
-    width: 14vw;
-  }
-  .qoute {
-    width: 12vw;
-  }
-}
-@media (max-width: 996px) {
-  .faqs h1 {
-    width: 25vw;
-  }
-}
-@media (max-width: 866px) {
-  .search-container input {
-    width: 60vw;
-  }
-  .blog-card {
-    width: 70vw;
-  }
-  .read-more-btn {
-    width: 65vw;
-  }
-}
-@media (max-width: 796px) {
-  .faqs {
-    padding: 50px 30px;
-  }
-  .faqs h1 {
-    font-size: 48px;
-  }
-  .see-all p {
-    width: 25vw;
-  }
-}
-@media (max-width: 768px) {
-  nav {
-    display: none;
-  }
-  .inner {
-    width: 95vw;
-    align-items: center;
-  }
-  .inner h1 {
-    font-size: 48px;
-    text-align: center;
-  }
-  .Customer {
-    font-size: 48px;
-  }
-  .svgs svg {
-    width: 95vw;
-  }
-  .trial button {
-    width: 23vw !important;
-    height: 5.5vh;
-    gap: 6px;
-  }
-  .upper {
-    margin-left: 18rem;
-    margin-top: 6.5rem;
-  }
-  .upper2 {
-    margin-left: 10rem;
-  }
-  .upper3 {
-    margin-left: 34rem;
-  }
-  .achivements-in {
-    padding: 50px;
-    flex-direction: column;
-    gap: 30px;
-  }
-  .left p {
-    width: 50vw;
-  }
-  .live-chat {
-    width: 40vw;
-  }
-  .card {
-    width: 50vw;
-  }
-  .section-inner h1 {
-    width: 50vw;
-  }
-  .section-inner {
-    margin-top: 200%;
-  }
-  .assist {
-    margin-top: 180%;
-  }
-  .wifi {
-    width: 50vw;
-  }
-  .colb {
-    margin-left: 35%;
+    margin-left: 75rem;
   }
   .sliders {
-    width: 4000vw;
+    width: 200vw;
   }
   .cardss {
-    width: 60vw;
-  }
-  .buttons {
-    margin-left: 35rem;
-  }
-  .wide {
-    width: 55vw;
-  }
-  .faq-container {
-    flex-direction: column;
-  }
-  .faq-item {
-    width: 90vw;
-  }
-  .secondinr {
-    flex-direction: column-reverse;
-  }
-  .object img {
-    right: 45%;
-  }
-  .getqoute h1 {
-    width: 90vw;
-  }
-  .secondinr {
-    padding: 50px 50px 0px 50px;
-  }
-  .search-container input {
-    width: 50vw;
-  }
-}
-@media (max-width: 606px) {
-  .faqs {
-    padding: 50px 30px;
-  }
-  .faqs h1 {
     width: 35vw;
-  }
-}
-@media (max-width: 575px) {
-  .see-all p {
-    width: 35vw;
-  }
-  .tab {
-    font-size: 12px;
-  }
-  .blog-card {
-    width: 90vw;
-  }
-  .read-more-btn {
-    width: 100%;
-  }
-}
-
-@media (max-width: 525px) {
-  .search-container input {
-    width: 50vw;
-  }
-}
-
-@media (max-width: 425px) {
-  .trial {
-    width: 95vw;
-  }
-  .trial button {
-    width: 40vw !important;
-  }
-  select {
-    width: 50vw;
-  }
-  .upper {
-    width: 130px;
-    font-size: 10px;
-  }
-  .upper2 {
-    margin-left: 5rem;
-  }
-  .upper {
-    margin-left: 9rem;
-    margin-top: 7.5rem;
-  }
-  .upper3 {
-    margin-left: 18rem;
-  }
-  .left p {
-    width: 80vw;
-  }
-  .whitey {
-    padding: 10px 10px 10px 10px;
-    border-radius: 12px;
-  }
-  .whitey h1 {
-    font-size: 32px;
-  }
-  .whitey p {
-    font-size: 12px;
-  }
-  .greeni {
-    height: 60px;
-  }
-  .service {
-    padding: 20px;
-  }
-  h3 {
-    font-size: 15px;
-    line-height: 20px;
-  }
-  .section-inner {
-    margin-top: 320%;
-    padding: 20px;
-  }
-  .card {
-    width: 80vw;
-  }
-  .assist {
-    margin-top: 270%;
-  }
-  .live-chat {
-    width: 40vw;
-    height: 20vh;
-  }
-  .assist h1 {
-    width: 80vw;
-    text-align: center;
-  }
-  .section-inner h1 {
-    width: 80vw;
-  }
-  .eight-section h1 {
-    text-align: center;
-  }
-  .testimonial-slider {
-    padding: 20px;
-  }
-  .testimonial blockquote {
-    font-size: 18px;
-    line-height: 30px;
-  }
-  .colb {
-    margin-left: 1%;
-  }
-  .wifi {
-    width: 90vw;
-  }
-  .blogs {
-    padding: 20px;
-  }
-  .sliders {
-    padding: 20px;
-  }
-  .cardss {
-    width: 90vw;
-  }
-  .wide {
-    width: 80vw;
-  }
-  .buttons {
-    margin-left: 10rem;
-  }
-  .FAQS {
-    padding: 20px;
   }
   .faq-question {
     font-size: 18px;
-  }
-  .object img {
-    right: 5%;
-  }
-  .object svg {
-    width: 400px;
-  }
-  .trial button a {
-    font-size: 12px;
-  }
-  .faqs {
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-}
-.faqs h1{
-  font-size: 40px;
-}
-    .see-all p {
-        width: 40vw;
-        font-size: 16px;
-    }
-}
-
-@media (max-width: 375px) {
-  .trial button a {
-    font-size: 12px;
-  }
-  .inner p {
-    width: 80vw;
-  }
-  .upper2 {
-    width: 32px;
-    height: 32px;
-    margin-top: 8rem;
-  }
-  .upper {
-    margin-left: 8rem;
-  }
-  .upper3 {
-    width: 32px;
-    height: 32px;
-    margin-left: 16.5rem;
-  }
-  .service {
-    gap: 20px;
-  }
-  .section-inner {
-    margin-top: 390%;
-  }
-  .assist {
-    margin-top: 330%;
-  }
-  .assist a {
-    width: 62vw;
-  }
-  .blogs {
-    flex-direction: column;
-    gap: 10px;
-    align-items: flex-start;
   }
 }
