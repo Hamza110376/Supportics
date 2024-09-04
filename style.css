@@ -2336,8 +2336,91 @@ footer {
   }
   .whitey p {
   }
+
+  /* Mobile devices starts here */
+  @media (max-width: 600px) {
+    .inner h1 {
+      font-size: 36px !important;
+    }
+    .Customer {
+      font-size: 36px !important;
+    }
+    .inner p {
+      font-size: 14px;
+    }
+    select {
+      font-size: 12px;
+    }
+    .achivements-in {
+      flex-direction: column;
+      gap: 20px;
+    }
+    .left p {
+      width: 70vw;
+    }
+    .service {
+      padding: 30px;
+    }
+    .section-inner {
+      margin-top: 230% !important;
+    }
+    .section-inner h1 {
+      font-size: 42px;
+    }
+    .card {
+      width: 70vw;
+    }
+    .assist {
+      margin-top: 230% !important;
+    }
+    .eight-section h1 {
+      font-size: 36px;
+    }
+    .testimonial-slider {
+      padding: 20px;
+      height: 130vw;
+    }
+    .headphones {
+      width: 100% !important;
+    }
+    .wifi {
+      width: 50vw;
+    }
+    .colb {
+      margin-left: 25% !important;
+      margin-top: 7%;
+    }
+    .sliders {
+      padding: 20px;
+      width: 300vw;
+    }
+    .cardss {
+      width: 95vw;
+    }
+    .buttons {
+      margin-left: 25rem !important;
+      margin-top: 38rem;
+    }
+    .FAQS h1 {
+      font-size: 42px;
+    }
+    .FAQS {
+      padding: 20px;
+    }
+    .faq-question {
+      font-size: 18px;
+    }
+    .getqoute h1 {
+      font-size: 40px;
+      line-height: 45px;
+      width: 100%;
+    }
+    .object img {
+      right: 32%;
+    }
+  }
   /* Small devices (portrait phones, less than 480px) */
-  @media (max-width: 479.98px) {
+  @media (max-width: 480px) {
     * {
       margin: 0;
       padding: 0;
@@ -2351,6 +2434,137 @@ footer {
     }
     body {
       overflow-x: hidden !important;
+    }
+    .trial {
+      width: 95vw;
+    }
+    .trial button {
+      width: 32% !important;
+    }
+    select {
+      width: 50vw;
+    }
+    .upper {
+      width: 130px;
+      font-size: 10px;
+    }
+    .upper2 {
+      margin-left: 5rem;
+    }
+    .upper {
+      margin-left: 9rem;
+      margin-top: 7.5rem;
+    }
+    .upper3 {
+      margin-left: 18rem;
+    }
+    .left p {
+      width: 80vw;
+    }
+    .whitey {
+      padding: 10px 10px 10px 10px;
+      border-radius: 12px;
+    }
+    .whitey h1 {
+      font-size: 32px;
+    }
+    .whitey p {
+      font-size: 12px;
+    }
+    .greeni {
+      height: 60px;
+    }
+    .service {
+      padding: 20px;
+    }
+    h3 {
+      font-size: 15px;
+      line-height: 20px;
+    }
+    .section-inner {
+      margin-top: 320% !important;
+      padding: 20px;
+    }
+    .card {
+      width: 80vw;
+    }
+    .assist {
+      margin-top: 300% !important;
+    }
+    .testimonial-slider {
+      padding: 20px;
+      height: 100vh;
+    }
+    .live-chat {
+      width: 40vw;
+      height: 20vh;
+    }
+    .assist h1 {
+      width: 80vw;
+      text-align: center;
+    }
+    .section-inner h1 {
+      width: 80vw;
+    }
+    .eight-section h1 {
+      text-align: center;
+    }
+    .testimonial-slider {
+      padding: 20px;
+    }
+    .testimonial blockquote {
+      font-size: 18px;
+      line-height: 30px;
+    }
+    .colb {
+      margin-left: 12% !important;
+    }
+    .wifi {
+      width: 90vw;
+    }
+    .blogs {
+      padding: 20px;
+    }
+    .sliders {
+      padding: 20px;
+    }
+    .cardss {
+      width: 90vw;
+    }
+    .wide {
+      width: 80vw;
+    }
+    .buttons {
+      margin-left: 18rem !important;
+    }
+    .FAQS {
+      padding: 20px;
+    }
+    .faq-question {
+      font-size: 18px;
+    }
+    .object img {
+      right: 5%;
+    }
+    .object svg {
+      width: 450px;
+    }
+    .trial button a {
+      font-size: 12px;
+    }
+    .faqs {
+      width: 100vw;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .faqs h1 {
+      font-size: 40px;
+    }
+    .see-all p {
+      width: 40vw;
+      font-size: 16px;
     }
   }
 
