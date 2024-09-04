@@ -2020,7 +2020,7 @@ footer {
 }
 
 /* Medium devices (landscape tablets and small desktops, less than 1024px) */
-@media (max-width: 1024px){
+@media (max-width: 1024px) {
   nav {
     width: 100% !important;
     padding: 20px;
@@ -2050,7 +2050,7 @@ footer {
   .inner p {
     font-size: 16px;
   }
- 
+
   .achivements-in {
     padding: 60px 90px 60px 90px;
   }
@@ -2099,13 +2099,13 @@ footer {
   .wifi {
     width: 30vw;
   }
-    .buttons {
+  .buttons {
     margin-left: 50rem !important;
   }
   .secondinr {
     gap: 0px !important;
   }
-    .sliders {
+  .sliders {
     width: 200vw;
   }
   .cardss {
@@ -2126,7 +2126,7 @@ footer {
   nav ul li a {
     font-size: 12px !important;
   }
-    .main-logo {
+  .main-logo {
     width: 12%;
     height: 60%;
   }
@@ -2174,6 +2174,12 @@ footer {
   .secondinr {
     gap: 30px;
   }
+  .sliders {
+    width: 200vw;
+  }
+  .cardss {
+    width: 35vw;
+  }
   .getqoute h1 {
     font-size: 40px;
     line-height: 45px;
@@ -2184,7 +2190,7 @@ footer {
 }
 
 /* Large devices (large desktops, less than 1400px) */
-@media (min-width: 1399.98px) and (max-width: 1273px){
+@media (min-width: 1399.98px) and (max-width: 1273px) {
   h3 {
     font-size: 1.5rem;
   }
