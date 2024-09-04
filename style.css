@@ -2105,6 +2105,12 @@ footer {
   .secondinr {
     gap: 0px !important;
   }
+    .sliders {
+    width: 200vw;
+  }
+  .cardss {
+    width: 40vw;
+  }
   .getqoute h1 {
     font-size: 40px;
     line-height: 45px;
