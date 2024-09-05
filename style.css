@@ -2002,7 +2002,7 @@ footer {
 /* Medium to large devices (desktops, less than 1200px) */
 
 /* Large devices (large desktops, less than 1400px) */
-@media (min-width: 1399.98px) and (max-width: 1273px) {
+@media (min-width: 1399px){
   * {
     margin: 0;
     padding: 0;
@@ -2032,7 +2032,7 @@ footer {
     margin-top: 10%;
   }
   .colb {
-    margin-left: 65%;
+    margin-left: 60%;
   }
   .buttons {
     margin-left: 75rem;
@@ -2046,8 +2046,14 @@ footer {
   .faq-question {
     font-size: 18px;
   }
+  /* Services page starts here */
+.btn-container {
+  width: 50vw !important;
 }
-@media (max-width: 1272px) {
+    /* Services page ends here */
+
+}
+@media (max-width: 1280px) {
   body {
     overflow-x: hidden !important;
   }
@@ -2093,6 +2099,9 @@ footer {
   .colb {
     margin-left: 58% !important;
   }
+  .live-chat {
+    width: 28vw;
+  }
   .wifi {
     width: 30vw;
   }
@@ -2115,6 +2124,14 @@ footer {
   .object img {
     right: 55%;
   }
+    /* Services page starts here */
+.btn-container {
+  width: 50vw !important;
+}
+.hire{
+  width: 40%;
+}
+    /* Services page ends here */
 }
 
 /* Medium devices (landscape tablets and small desktops, less than 1024px) */
@@ -2231,6 +2248,44 @@ footer {
   .object img {
     right: 55%;
   }
+    /* Services page starts here */
+.blue-container{
+padding: 34px 46px 34px 46px;
+}
+.left-corner h1 {
+  width: 50vw;
+  font-size: 54px;
+}
+.left-corner p {
+  width: 45vw;
+  font-size: 16px;
+}
+.right-corner {
+width: 40vw;
+padding: 30px;
+}
+.right-corner h1 {
+  width: 30vw;
+}
+#name{
+  width: 30vw;
+}
+.right-corner form textarea{
+  width: 30vw;
+}
+.services-container{
+  padding: 34px 46px 34px 46px;
+}
+.doctor-image{
+width: 90%;
+}
+.fast-replies {
+  padding: 20px;
+}
+.fast-replies p {
+  width: 20vw;
+}
+    /* Services page ends here */
 }
 /* Small to medium devices (portrait tablets and large phones, less than 768px) */
 @media (max-width: 992px) {
@@ -2320,6 +2375,9 @@ footer {
   .getqoute {
     padding: 70px;
   }
+    /* Services page starts here */
+
+    /* Services page ends here */
 }
 @media (max-width: 768px) {
   .section-inner {
@@ -2336,7 +2394,9 @@ footer {
   }
   .whitey p {
   }
+  /* Services page starts here */
 
+    /* Services page ends here */
   /* Mobile devices starts here */
   @media (max-width: 600px) {
     .inner h1 {
@@ -2418,6 +2478,9 @@ footer {
     .object img {
       right: 32%;
     }
+      /* Services page starts here */
+
+    /* Services page ends here */
   }
   /* Small devices (portrait phones, less than 480px) */
   @media (max-width: 480px) {
@@ -2569,15 +2632,54 @@ footer {
     .getqoute {
       padding: 30px;
     }
-  }
+    .trial button a {
+      font-size: 10px;
+    }
+      /* Services page starts here */
 
+    /* Services page ends here */
+  }
+  @media (max-width: 540px) {
+    .trial button a {
+      font-size: 12px;
+    }
+    .section-inner {
+      margin-top: 320% !important;
+    }
+    .assist {
+      margin-top: 300% !important;
+    }
+    .testimonial-slider {
+      padding: 20px;
+      height: 155vw;
+    }
+    .wifi {
+      width: 55vw;
+    }
+    .buttons {
+      margin-left: 22rem !important;
+      margin-top: 38rem;
+    }
+    .object img {
+      right: 25%;
+    }
+    .object svg {
+      width: 520px;
+    }
+      /* Services page starts here */
+
+    /* Services page ends here */
+  }
   /* Very small devices (less than 360px) */
-  @media (max-width: 426px) {
+  @media (max-width: 430px) {
     .trial {
       width: 95vw;
     }
     .trial button {
-      width: 35% !important;
+      width: 37% !important;
+    }
+    .trial button a {
+      font-size: 10px;
     }
     .inner h1 {
       font-size: 30px !important;
@@ -2711,7 +2813,126 @@ footer {
       width: 40vw;
       font-size: 16px;
     }
+      /* Services page starts here */
+
+    /* Services page ends here */
   }
 }
 
 /* Small devices (landscape phones, less than 600px) */
+/* Very small devices (less than 360px) */
+@media (max-width: 396px) {
+  .trial button {
+    width: 40% !important;
+  }
+  .assist a{
+    font-size: 16px;
+  }
+  .object svg {
+      width: 350px;
+    }
+  select {
+    width: 50vw;
+    font-size: 12px;
+  }
+  .whitey {
+    padding: 5px !important;
+  }
+  .whitey h1 {
+    font-size: 24px;
+  }
+  .greeni {
+    height: 60px;
+  }
+  .section-inner {
+    margin-top: 460% !important;
+    padding: 20px;
+  }
+  .assist {
+    margin-top: 450% !important;
+  }
+  .buttons {
+    margin-left: 13rem !important;
+  }
+  .object img {
+    right: 1%;
+  }
+    /* Services page starts here */
+
+    /* Services page ends here */
+}
+
+@media (max-width: 320px) {
+  .trial button a {
+    font-size: 11px;
+  }
+  .services h1 {
+    font-size: 42px;
+  }
+  .live-chat {
+    padding: 10px;
+  }
+  .service {
+    gap: 10px;
+  }
+  h3 {
+    font-size: 12px !important;
+    line-height: 20px;
+    width: 100% !important;
+  }
+  .section-inner {
+    margin-top: 700% !important;
+    padding: 20px;
+  }
+  .section-inner h1 {
+    font-size: 36px;
+  }
+  .assist {
+    margin-top: 690% !important;
+    padding: 30px;
+  }
+  .assist h1 {
+    font-size: 36px;
+  }
+  .testimonial-slider {
+    padding: 20px;
+    height: 150vh;
+  }
+  .colb {
+    margin-left: 0% !important;
+  }
+  .blogs {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 20px;
+  }
+  .blogs h1 {
+    font-size: 36px;
+  }
+  .buttons {
+    margin-left: 5rem !important;
+  }
+  .FAQS h1 {
+    font-size: 36px;
+  }
+  .faq-question {
+    font-size: 14px;
+  }
+  .object img {
+    right: 1%;
+    margin-top: 52%;
+    width: 90%;
+  }
+  .object svg {
+    width: 300px;
+  }
+  .getqoute h1 {
+    font-size: 36px;
+    line-height: 45px;
+    width: 100%;
+  }
+    /* Services page starts here */
+
+    /* Services page ends here */
+}
