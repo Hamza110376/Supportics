@@ -2577,7 +2577,24 @@ footer {
       right: 32%;
     }
     /* Services page starts here */
-
+    .left-corner h1 {
+        width: 85vw;
+        font-size: 42px;
+    }
+    .left-corner p {
+        width: 85vw;
+        font-size: 16px;
+    }
+    .btn-container {
+        width: 80vw !important;
+    }
+    .right-content button {
+      width: 10vw;
+    }
+    .blogs h1 {
+      font-size: 40px;
+    }
+}
     /* Services page ends here */
   }
   /* Small devices (portrait phones, less than 480px) */
@@ -2734,7 +2751,58 @@ footer {
       font-size: 10px;
     }
     /* Services page starts here */
-
+    .blue-container {
+        padding: 20px;
+    }
+            .left-corner h1 {
+            width: 85vw;
+            font-size: 38px;
+        }
+        .right-corner{
+          align-items: center;
+        }
+        .colb{
+          display: none;
+        }
+                .right-content button {
+            width: 12vw;
+        }
+            .right-content ul li {
+        width: 90%;
+        margin-left: 5%;
+    }
+        .supportic-service h1 {
+        font-size: 38px;
+    }
+        .fast-replies {
+        width: 40vw;
+    }
+        .fast-replies h4 {
+        font-size: 18px;
+    }
+    .fast-replies p {
+        width: 40vw;
+    }
+            .blogs h1 {
+            font-size: 36px;
+        }
+            .supportic-service h1 {
+        font-size: 34px;
+    }
+        .fast-replies {
+        width: 80vw;
+    }
+        .fast-replies p {
+        width: 70vw;
+    }        .blogs h1 {
+            font-size: 28px;
+        }
+    .blogs a{
+      font-size: 14px;
+    }
+        .right-content button {
+        width: 15vw;
+    }
     /* Services page ends here */
   }
   @media (max-width: 540px) {
@@ -2915,7 +2983,7 @@ footer {
 
     /* Services page ends here */
   }
-}
+
 
 /* Small devices (landscape phones, less than 600px) */
 /* Very small devices (less than 360px) */
@@ -2956,7 +3024,12 @@ footer {
     right: 1%;
   }
   /* Services page starts here */
-
+.blogs{
+  flex-direction: column !important;
+}
+        .blogs h1 {
+            font-size: 24px;
+        }
   /* Services page ends here */
 }
 
@@ -3030,6 +3103,10 @@ footer {
     line-height: 45px;
     width: 100%;
   }
+      .supportic-service h1 {
+        font-size: 20px;
+    }
+}
   /* Services page starts here */
 
   /* Services page ends here */
