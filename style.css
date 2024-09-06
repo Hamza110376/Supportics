@@ -1335,6 +1335,9 @@ input[type="checkbox"] {
   flex-direction: column;
   gap: 20px;
 }
+#para2{
+  flex-direction: row-reverse
+}
 .para h2 {
   color: var(--Base-Base-Black, #036);
   font-family: Gilroy;
@@ -2134,6 +2137,15 @@ footer {
     width: 40%;
   }
   /* Services page ends here */
+  /* Blogs-inner section starts here */
+.customer-satisfaction h1{
+  width: 60vw;
+  font-size: 54px;
+}
+.customer-satisfaction p {
+  font-size: 22px;
+}
+  /* Blogs-inner section ends here */
 }
 
 /* Medium devices (landscape tablets and small desktops, less than 1024px) */
@@ -2291,6 +2303,36 @@ footer {
     margin-left: 10%;
   }
   /* Services page ends here */
+    /* Blogs-inner section starts here */
+.customer-satisfaction h1{
+  width: 60vw;
+  font-size: 48px;
+}
+.customer-satisfaction p {
+  font-size: 20px;
+
+}
+  .Approach h1 {
+    font-size: 34px;
+  }
+  .line p {
+width: 30vw;
+  }
+  /* Blogs-inner section ends here */
+
+  /*  about us section tarts here */
+.section-2 h1{
+  font-size: 56px;
+  width: 50vw;
+}
+.whoweare{
+  gap: 60px;
+}
+.para p{
+  width: 35vw;
+}
+
+    /*  about us section ends here */
 }
 /* Small to medium devices (portrait tablets and large phones, less than 768px) */
 @media (max-width: 992px) {
@@ -2315,6 +2357,37 @@ footer {
     padding: 60px;
     margin-top: 60% !important;
   }
+  /* blog inner section starts here */
+  .customer-satisfaction {
+    padding: 50px 46px 50px 46px;
+
+  }
+  .imgs {
+    align-items: flex-start;
+    justify-content: flex-start;
+   
+}
+.main-2{
+   padding: 50px 46px 50px 46px;
+   gap: 50px;
+}
+.social-icons{
+  gap: 10px;
+}
+/* blogs inner section ends here */
+    /*  about us section starts here */
+    .section-2 h1 {
+        font-size: 48px;
+        width: 50vw;
+    }
+.para h2 {
+  font-size: 32px;
+}
+    .para p {
+        width: 35vw;
+        font-size: 16px;
+    }
+        /*  about us section ends here */
 }
 @media (max-width: 820px) {
   .inner h1 {
@@ -2418,6 +2491,37 @@ footer {
     font-size: 14px;
   }
   /* Services page ends here */
+
+  /* blogs inner section starts here */
+    .customer-satisfaction h1 {
+      font-size: 42px;
+    }
+        .customer-satisfaction p {
+        font-size: 18px;
+    }
+        .Approach h1 {
+        font-size: 30px;
+    }
+    .Approach p{
+      font-size: 16px;
+      width: 60vw;
+    }
+    .blogs{
+      padding: 46px;
+    }
+  /* blogs inner section ends here */
+     /*  about us section starts here */
+.whoweare{
+  flex-direction: column;
+}
+#para2{
+  flex-direction: column;
+}
+    .para p {
+        width: 70vw;
+        font-size: 16px;
+    }
+        /*  about us section ends here */
 }
 @media (max-width: 768px) {
   .section-inner {
@@ -2596,6 +2700,46 @@ footer {
     }
 }
     /* Services page ends here */
+
+    /* Blogs inner section starts here */
+.customer-satisfaction h1 {
+        font-size: 38px;
+        width: 80vw;
+    }
+    .customer-satisfaction p {
+        font-size: 16px;
+        width: 80vw;
+    }
+        .social-icons {
+          flex-direction: column;
+        gap: 10px;
+    }
+    .right-section h5 {
+      font-size: 12px;
+    }
+    .right-section p{
+      font-size: 16px;
+    }
+        .line p {
+        width: 40vw;
+    }
+    /* Blogs inner section ends here */
+
+      /* about us section ends here */
+
+    .section-2 h1 {
+        font-size: 42px;
+        width: 60vw;
+    }
+        .whoweare {
+        gap: 40px;
+    }
+        .para h2 {
+        font-size: 30px;
+    }
+        /* about us section ends here */
+
+
   }
   /* Small devices (portrait phones, less than 480px) */
   @media (max-width: 480px) {
@@ -2804,6 +2948,16 @@ footer {
         width: 15vw;
     }
     /* Services page ends here */
+
+    /*  about us section starts here */
+.call-center{
+width: 85%;
+}
+    .section-2 h1 {
+        font-size: 40px;
+        width: 65vw;
+    }
+    /*  about us section ends here */
   }
   @media (max-width: 540px) {
     .trial button a {
@@ -2832,9 +2986,11 @@ footer {
     .object svg {
       width: 520px;
     }
-    /* Services page starts here */
-
-    /* Services page ends here */
+    /* about us starts here */
+.call-center{
+width: 80%;
+}
+    /* about us page ends here */
   }
   /* Very small devices (less than 360px) */
   @media (max-width: 430px) {
@@ -2979,9 +3135,19 @@ footer {
       width: 40vw;
       font-size: 16px;
     }
-    /* Services page starts here */
-
-    /* Services page ends here */
+    /* about us page starts here */
+    .section-2 h1 {
+        font-size: 38px;
+        width: 70vw;
+    }
+        .para p {
+        width: 75vw;
+        font-size: 14px;
+    }
+        .para h2 {
+        font-size: 26px;
+    }
+    /* about us page ends here */
   }
 
 
@@ -3107,7 +3273,10 @@ footer {
         font-size: 20px;
     }
 }
-  /* Services page starts here */
-
-  /* Services page ends here */
+  /* about us page starts here */
+    .section-2 h1 {
+        font-size: 36px;
+        width: 80vw;
+    }
+  /* about us page ends here */
 }
