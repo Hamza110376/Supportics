@@ -1473,7 +1473,7 @@ input[type="checkbox"] {
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-  width: 10vw;
+  width: 20vw;
 }
 .faqs {
   width: 100vw;
@@ -2003,8 +2003,104 @@ input[type="checkbox"] {
 footer {
   width: 100vw;
   margin-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
 }
+.footer-inner{
+  width: 95vw;
+  height: 95vh;
+  border-radius: 24px;
+background: var(--Base-Base-Black, #036);
+overflow: hidden;
+}
+.vector1{
+  position: absolute;
+  left: 43%;
 
+}
+.vector2{
+  position: absolute;
+margin-top: 25%;
+}
+.footer-main{
+  width: 95%;
+  height: 95%;
+  position: absolute;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+gap: 64px;
+  z-index: 100000;
+}
+.footer-main p{
+  color: var(--Base-Base-White, #FAFAFA);
+text-align: center;
+font-family: Gilroy;
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: 160%; /* 32px */
+text-align: center;
+width: 50vw;
+}
+.footer-menu{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 50px;
+}
+.footer-menu a{
+  color: var(--Asklepios-Gray-White-A64, rgba(255, 255, 255, 0.64));
+text-align: center;
+font-family: Gilroy;
+font-size: 24px;
+font-style: normal;
+font-weight: 800;
+line-height: 32px; /* 133.333% */
+letter-spacing: -0.24px;
+text-decoration: none;
+}
+.sqre{
+  width: 6px;
+height: 6px;
+background: var(--Asklepios-Gray-50, #818BA0);
+}
+.footer-discription{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+gap: 20px;
+}
+.copyright{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.copyright h5{
+  color: var(--Base-Base-White, #FAFAFA);
+font-family: Gilroy;
+font-size: 14px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+letter-spacing: -0.14px;
+}
+.copyright a{
+  color: var(--Base-Base-White, #FAFAFA);
+font-family: Gilroy;
+font-size: 14px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+letter-spacing: -0.14px;
+text-decoration: none;
+}
 /* Medium to large devices (desktops, less than 1200px) */
 
 /* Large devices (large desktops, less than 1400px) */
@@ -2057,6 +2153,15 @@ footer {
     width: 30vw !important;
   }
   /* Services page ends here */
+
+   /* contact us page ends here */
+.cntct h5{
+  font-size: 18px;
+}
+.cntct img{
+  width: 20%;
+}
+    /* contact us page ends here */
 }
 @media (max-width: 1280px) {
   body {
@@ -2146,6 +2251,15 @@ footer {
   font-size: 22px;
 }
   /* Blogs-inner section ends here */
+
+    /* contact us section ends here */
+.cntct h5 {
+  font-size: 16px;
+}
+.cntct img{
+  width: 20%;
+}
+      /* contact us section ends here */
 }
 
 /* Medium devices (landscape tablets and small desktops, less than 1024px) */
@@ -2333,6 +2447,32 @@ width: 30vw;
 }
 
     /*  about us section ends here */
+
+        /* contact us section ends here */
+.cntct h5 {
+  font-size: 16px;
+}
+.cntct img{
+  width: 20%;
+}
+.contact{
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.main-form{
+  width: 95%;
+}
+    #name {
+        width: 80%;
+    }
+    .main-form h1 {
+      font-size: 48px;
+    }
+    #message{
+      width: 100%;
+    }
+      /* contact us section ends here */
 }
 /* Small to medium devices (portrait tablets and large phones, less than 768px) */
 @media (max-width: 992px) {
@@ -2388,6 +2528,35 @@ width: 30vw;
         font-size: 16px;
     }
         /*  about us section ends here */
+             /* contact us section starts here */
+.cntct h5 {
+  font-size: 16px;
+}
+.cntct img{
+  width: 20%;
+}
+.contact{
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.main-form{
+  width: 95%;
+}
+    #name {
+        width: 100%;
+    }
+    .main-form h1 {
+      font-size: 48px;
+    }
+    #message{
+      width: 100%;
+    }
+    .inputs{
+      width: 100%;
+      flex-direction: column;
+    }
+      /* contact us section ends here */
 }
 @media (max-width: 820px) {
   .inner h1 {
@@ -2522,6 +2691,18 @@ width: 30vw;
         font-size: 16px;
     }
         /*  about us section ends here */
+                     /* contact us section starts here */
+    .main-form h1 {
+        font-size: 42px;
+    }
+    .inner-check label {
+      font-size: 14px;
+    }
+    .contact{
+      padding: 20px;
+    }
+                                  /* contact us section ends here */
+
 }
 @media (max-width: 768px) {
   .section-inner {
@@ -2738,6 +2919,28 @@ width: 30vw;
         font-size: 30px;
     }
         /* about us section ends here */
+        /*  contact us section starts here */
+.main-form{
+  padding: 20px;
+}
+.quick p{
+  font-size: 14px;
+}
+    .inner-check label {
+        font-size: 12px;
+    }
+    .inner-check {
+    padding: 0px 5px;
+}
+.imageTag {
+   
+    width: 90%;
+ 
+}
+.foems {
+    margin-right: 8rem;
+}
+          /*  contact us section ends here */
 
 
   }
@@ -2958,6 +3161,34 @@ width: 85%;
         width: 65vw;
     }
     /*  about us section ends here */
+
+    /* contact us page starts here */
+
+        .main-form h1 {
+        font-size: 38px;
+    }
+        .quick p {
+        font-size: 10px;
+    }
+        .inner-check label {
+        font-size: 10px;
+    }
+    input[type="checkbox"]{
+      width: 10px;
+      height: 10px;
+    }
+    #name{
+      height: 48px;
+    }
+    #message {
+      height: 12vh;
+    }
+    #submit {
+      padding: 12px 24px;
+      font-size: 14px;
+    }
+        /* contact us page ends here */
+
   }
   @media (max-width: 540px) {
     .trial button a {
@@ -3148,6 +3379,26 @@ width: 80%;
         font-size: 26px;
     }
     /* about us page ends here */
+    /* contact us page starts her */
+        .cntct h5 {
+        font-size: 14px;
+    }
+        .foems {
+        margin-right: 6rem;
+        margin-bottom: 4rem;
+    }
+    .checks {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+.response {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+        /* contact us page ends her */
+
   }
 
 
@@ -3196,6 +3447,7 @@ width: 80%;
         .blogs h1 {
             font-size: 24px;
         }
+        
   /* Services page ends here */
 }
 
@@ -3279,4 +3531,4 @@ width: 80%;
         width: 80vw;
     }
   /* about us page ends here */
-}
+
