@@ -195,5 +195,3 @@ document.querySelectorAll(".faq-question").forEach((item) => {
 //       nav.style.left = "30%";
 //   }
 // });
-
-

@@ -9,19 +9,31 @@
 
   <body>
     <div class="main">
-      <nav>
-        <img src="./assets/Layer_1.png" alt="logo" />
+    <nav>
+        <img class="main-logo" src="./assets/Layer_1.png" alt="logo" />
         <ul>
+          <img id="minilogo" src="./assets/Layer_88.png" alt="" />
           <li>
             <a href="./Home.html">
-              <span> <img src="./assets/elements.png" alt="" /> </span> Home</a
+              <span class="icons">
+                <img src="./assets/elements.png" alt="" />
+              </span>
+              Home</a
             >
           </li>
-          <li><a href="./Services.html">Services</a></li>
+          <li class="dropdown"><a href="./Services.html">Services</a></li>
           <li><a href="./industries.html">Industries</a></li>
           <li><a href="./aboutus.html">About Us</a></li>
           <li><a href="./blogs.html">Blogs</a></li>
           <li><a href="./contact.html">Contact</a></li>
+
+          <div id="btn" class="btn">
+            <button class="numbr">
+              <span> <img src="./assets/elements2.png" /> </span>
+              <a href="#">+1 23 4567 89</a>
+            </button>
+            <button class="qoute"><a href="#">Get A Quote</a></button>
+          </div>
         </ul>
 
         <div class="btn">
@@ -32,6 +44,23 @@
           <button class="qoute"><a href="#">Get A Quote</a></button>
         </div>
       </nav>
+  <!-- mobile navbar starts here -->
+      <nav class="mobile-nav">
+ <div class="mobile-inner">
+      <img src="./assets/Logo Square.png" alt="">
+      <button class="menu-button">Menu <span><img class="arrow" src="./assets/Monotone add 3.png" alt=""></span></button>
+ </div>
+ <div class="mobile-menus">
+<a href="./Home.html">Home</a>
+<a href="./Services.html">Services</a>
+<a href="./industries.html">Industries</a>
+<a href="./aboutus.html">About Us</a>
+<a href="./blogs.html">Blog</a>
+<a href="./contact.html">Contact</a>
+ </div>
+       </nav>
+        
+  
       <div class="contact">
         <div class="imageTag">
           <div class="inner-content">
@@ -204,11 +233,11 @@
                 making a difference, we're here to help your business thrive.
             </p>
             <div class="footer-menu">
-                <a href="">Homepage</a>
-                <a href="">Services</a>
-                <a href="">Platform</a>
-                <a href="">About Us</a>
-                <a href="">Contact Us</a>
+                <a href="./Home.html">Homepage</a>
+                <a href="./Services.html">Services</a>
+                <a href="./industries.html">Platform</a>
+                <a href="./aboutus.html">About Us</a>
+                <a href="./contact.html">Contact Us</a>
             </div>
             <div class="social-icons">
               <a href=""><img src="./assets/icons/icon facebook.png" alt=""></a>
@@ -217,7 +246,7 @@
             <a href=""><img src="./assets/icons/icon linkedin.png" alt=""></a>
             </div>
             <div class="copyright">
-                <h5>Copyright© 2045 Supportics</h5>
+                <h5>Copyright© 2024 Supportics</h5>
                 <div class="sqre"></div>
                 <a href="">Privacy Policy</a>
                 <div class="sqre"></div>
@@ -227,7 +256,20 @@
         </div>
       </footer>
     </div>
+<script>
+  let menuButton = document.querySelector(".menu-button");
+    let mobileMenus = document.querySelector(".mobile-menus");
 
+    menuButton.addEventListener("click", function () {
+     if (mobileMenus.style.display === "flex") {
+       mobileMenus.style.display = "none"
+     }
+     else{
+       mobileMenus.style.display = "flex"
+     }
+
+    })
+</script>
     <script src="./script.js"></script>
   </body>
 </html>
