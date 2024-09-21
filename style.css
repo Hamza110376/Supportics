@@ -43,6 +43,46 @@ nav ul {
   gap: 50px;
   z-index: 1000;
 }
+.services-toggler{
+  width: 70vw;
+  height: 50vh;
+  position: absolute;
+box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+ background: var(--White, #FFF);
+  right: 20%;
+  top: 10%;
+  display: none;
+  float: none;
+}
+
+.dropdown:hover .services-toggler,
+.services-toggler:hover {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+.services-button{
+  width: 15vw;
+  height: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid var(--Neutrals-Neutrals900, #E6E6E6);
+  color: var(--Base-Base-Black, #036);
+font-family: Gilroy;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: 24px; /* 150% */
+letter-spacing: 0.2px;
+}
+
 .icons {
   display: flex;
   align-items: center;
@@ -1423,6 +1463,10 @@ input[type="checkbox"] {
   font-weight: 500;
   line-height: 32px; /* 160% */
   letter-spacing: -0.2px;
+  cursor: pointer;
+}
+.menu ul li.active{
+  color: #28a745;
 }
 .righty {
   width: 70vw;

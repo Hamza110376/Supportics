@@ -35,32 +35,32 @@
                     <h3>Industries</h3>
                     <ul id="industry-list">
 
-                        <li>E--commerce</li>
-                        <li>Automotive</li>
-                        <li>Healthcare</li>
-                        <li>Technology</li>
-                        <li>Finance and Banking</li>
-                        <li>Travel and Hospitality</li>
-                        <li>Retail</li>
-                        <li>Real Estate</li>
-                        <li>Education</li>
-                        <li>Entertainment and Media</li>
-                        <li>Food and Beverage</li>
-                        <li>Logistics and Supply Chain</li>
-                        <li>Pharmaceuticals</li>
-                        <li>Fashion and Apparel</li>
-                        <li>Sports and Fitness</li>
-                        <li>Beauty and Personal Care</li>
-                        <li>Software as a Service (SaaS)</li>
-                        <li>Fitness and Wellness</li>
-                        <li>Pet Care and Services</li>
-                        <li>Construction and Building Materials</li>
-                        <li>Marketing and Advertising</li>
-                        <li>Event Planning and Management</li>
-                        <li>Luxury Goods and Services</li>
-                        <li>Transportation Services</li>
-                        <li>Security Services</li>
-                        <li>Subscription Services</li>
+                        <li onclick="showInfo('E-commerce')">E-commerce</li>
+                        <li onclick="showInfo('Automotive')">Automotive</li>
+                        <li onclick="showInfo('Healthcare')">Healthcare</li>
+                        <li onclick="showInfo('Technology')">Technology</li>
+                        <li onclick="showInfo('Finance and Banking')">Finance and Banking</li>
+                        <li onclick="showInfo('Travel and Hospitality')">Travel and Hospitality</li>
+                        <li onclick="showInfo('Retail')">Retail</li>
+                        <li onclick="showInfo('Real Estate')">Real Estate</li>
+                        <li onclick="showInfo('Education')">Education</li>
+                        <li onclick="showInfo('Entertainment and Media')">Entertainment and Media</li>
+                        <li onclick="showInfo('Food and Beverage')">Food and Beverage</li>
+                        <li onclick="showInfo('Logistics and Supply Chain')">Logistics and Supply Chain</li>
+                        <li onclick="showInfo('Pharmaceuticals')">Pharmaceuticals</li>
+                        <li onclick="showInfo('Fashion and Apparel')">Fashion and Apparel</li>
+                        <li onclick="showInfo('Sports and Fitness')">Sports and Fitness</li>
+                        <li onclick="showInfo('Beauty and Personal Care')">Beauty and Personal Care</li>
+                        <li onclick="showInfo('Software as a Service (SaaS)')">Software as a Service (SaaS)</li>
+                        <li onclick="showInfo('Fitness and Wellness')">Fitness and Wellness</li>
+                        <li onclick="showInfo('Pet Care and Services')">Pet Care and Services</li>
+                        <li onclick="showInfo('Construction and Building Materials')">Construction and Building Materials</li>
+                        <li onclick="showInfo('Marketing and Advertising')">Marketing and Advertising</li>
+                        <li onclick="showInfo('Event Planning and Management')">Event Planning and Management</li>
+                        <li onclick="showInfo('Luxury Goods and Services')">Luxury Goods and Services</li>
+                        <li onclick="showInfo('Transportation Services')">Transportation Services</li>
+                        <li onclick="showInfo('Security Services')">Security Services</li>
+                        <li onclick="showInfo('Subscription Services')">Subscription Services</li>
 
                     </ul>
 
@@ -68,7 +68,7 @@
                 <div class="righty">
                     <div class="call-center">
                         <img src="./assets/Frame.png" alt="">
-                        <div class="nam">
+                        <div class="nam" id="info-display">
                             <h2>Industry Name</h2>
                             <p>At Supportics, we're not just a service provider; we're an extension of your team. Our
                                 passionate professionals bring
@@ -84,22 +84,7 @@
                     </div>
 
 
-                            <div style="flex-direction: row-reverse;" class="call-center">
-                                <img src="./assets/Frame.png" alt="">
-                                <div class="nam">
-                                    <h2>Industry Name</h2>
-                                    <p>At Supportics, we're not just a service provider; we're an extension of your team. Our
-                                        passionate professionals bring
-                                        years of experience and a deep understanding of customer service dynamics.
-                                    </p>
-                                    <p>
-                                        We believe in creating meaningful connections with your customers, ensuring their needs
-                                        are met with empathy and
-                                        expertise
-                                    </p>
-                            
-                                </div>
-                            </div>
+                      
                 </div>
             </div>
         </div>
@@ -149,7 +134,27 @@
         <!-- Contact section ended -->
     </div>
 
+<script>
+    function showInfo(industry) {
+     const items = document.querySelectorAll("#industry-list li");
+     items.forEach(item=>item.classList.remove("active"));
 
+           const activeItem = document.querySelector(`#industry-list li[onclick="showInfo('${industry}')"]`);
+        activeItem.classList.add('active');
+
+         const infoDisplay = document.getElementById('info-display');
+         let info= ""
+
+         switch (industry) {
+            case "E-commerce":
+                info=" <h2>E-commerce</h2><p>Customers experience matters more than ever. With Supportics, you're not just getting support, you’re getting a team that's responsive, knowledgeable, and dedicated to making every interaction count. We handle everything from quick questions to complex issues, for customers to feel valued and heard. We grow your online business and keeping your customers coming back for more.</p>"
+                break;
+         
+            default:
+                break;
+         }
+    }
+</script>
 
     <script src="./script.js"></script>
     
