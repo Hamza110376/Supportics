@@ -1,163 +1,407 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="main">
-        <nav>
-            <img src="./assets/Layer_1.png" alt="logo">
-            <ul>
-                <li><a href="./Home.html"> <span> <img src="./assets/elements.png" alt=""> </span> Home</a></li>
-                <li><a href="./Services.html">Services</a></li>
-                <li><a href="./industries.html">Industries</a></li>
-                <li><a href="./aboutus.html">About Us</a></li>
-                <li><a href="./blogs.html">Blogs</a></li>
-                <li><a href="./contact.html">Contact</a></li>
+      <nav>
+        <img src="./assets/Layer_1.png" alt="logo" />
+        <ul>
+          <li>
+            <a href="./Home.html">
+              <span> <img src="./assets/elements.png" alt="" /> </span> Home</a
+            >
+          </li>
+          <li><a href="./Services.html">Services</a></li>
+          <li><a href="./industries.html">Industries</a></li>
+          <li><a href="./aboutus.html">About Us</a></li>
+          <li><a href="./blogs.html">Blogs</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+
+        <div class="btn">
+          <button class="numbr">
+            <span> <img src="./assets/elements2.png" /> </span>
+            <a href="#">+1 23 4567 89</a>
+          </button>
+          <button class="qoute"><a href="#">Get A Quote</a></button>
+        </div>
+      </nav>
+      <div class="industries">
+        <h1>Industries We Serve</h1>
+        <div class="main-content">
+          <div class="menu">
+            <h3>Industries</h3>
+            <ul id="industry-list">
+              <li onclick="showInfo('E-commerce')">E-commerce</li>
+              <li onclick="showInfo('Automotive')">Automotive</li>
+              <li onclick="showInfo('Healthcare')">Healthcare</li>
+              <li onclick="showInfo('Technology')">Technology</li>
+              <li onclick="showInfo('Finance and Banking')">
+                Finance and Banking
+              </li>
+              <li onclick="showInfo('Travel and Hospitality')">
+                Travel and Hospitality
+              </li>
+              <li onclick="showInfo('Retail')">Retail</li>
+              <li onclick="showInfo('Real Estate')">Real Estate</li>
+              <li onclick="showInfo('Education')">Education</li>
+              <li onclick="showInfo('Entertainment and Media')">
+            Entertainment and Media
+              </li>
+              <li onclick="showInfo('Food and Beverage')">Food and Beverage</li>
+              <li onclick="showInfo('Logistics and Supply Chain')">
+                Logistics and Supply Chain
+              </li>
+              <li onclick="showInfo('Pharmaceuticals')">Pharmaceuticals</li>
+              <li onclick="showInfo('Fashion and Apparel')">
+                Fashion and Apparel
+              </li>
+              <li onclick="showInfo('Sports and Fitness')">
+                Sports and Fitness
+              </li>
+              <li onclick="showInfo('Beauty and Personal Care')">
+                Beauty and Personal Care
+              </li>
+              <li onclick="showInfo('Software as a Service (SaaS)')">
+                Software as a Service (SaaS)
+              </li>
+              <li onclick="showInfo('Fitness and Wellness')">
+                Fitness and Wellness
+              </li>
+              <li onclick="showInfo('Pet Care and Services')">
+                Pet Care and Services
+              </li>
+              <li onclick="showInfo('Construction and Building Materials')">
+                Construction and Building Materials
+              </li>
+              <li onclick="showInfo('Marketing and Advertising')">
+                Marketing and Advertising
+              </li>
+              <li onclick="showInfo('Event Planning and Management')">
+                Event Planning and Management
+              </li>
+              <li onclick="showInfo('Luxury Goods and Services')">
+                Luxury Goods and Services
+              </li>
+              <li onclick="showInfo('Transportation Services')">
+                Transportation Services
+              </li>
+              <li onclick="showInfo('Security Services')">Security Services</li>
+              <li onclick="showInfo('Subscription Services')">
+                Subscription Services
+              </li>
             </ul>
-
-            <div class="btn">
-                <button class="numbr"> <span> <img src="./assets/elements2.png"> </span> <a href="#">+1 23 4567
-                        89</a></button>
-                <button class="qoute"> <a href="#">Get A Quote</a> </button>
+          </div>
+          <div class="righty">
+            <div class="call-center">
+              <img src="./assets/Frame.png" alt="" />
+              <div class="nam" id="info-display">
+                <h2>E-commerce</h2>
+                <p>
+            Customers experience matters more than ever. With Supportics, you're not just getting support, you’re getting a team
+            that's responsive, knowledgeable, and dedicated to making every interaction count. We handle everything from quick
+            questions to complex issues, for customers to feel valued and heard. We grow your online business and keeping your
+            customers coming back for more.
+                </p>
+            
+              </div>
             </div>
-        </nav>
-        <div class="industries">
-            <h1>Industries We Serve</h1>
-            <div class="main-content">
-
-                <div class="menu">
-                    <h3>Industries</h3>
-                    <ul id="industry-list">
-
-                        <li onclick="showInfo('E-commerce')">E-commerce</li>
-                        <li onclick="showInfo('Automotive')">Automotive</li>
-                        <li onclick="showInfo('Healthcare')">Healthcare</li>
-                        <li onclick="showInfo('Technology')">Technology</li>
-                        <li onclick="showInfo('Finance and Banking')">Finance and Banking</li>
-                        <li onclick="showInfo('Travel and Hospitality')">Travel and Hospitality</li>
-                        <li onclick="showInfo('Retail')">Retail</li>
-                        <li onclick="showInfo('Real Estate')">Real Estate</li>
-                        <li onclick="showInfo('Education')">Education</li>
-                        <li onclick="showInfo('Entertainment and Media')">Entertainment and Media</li>
-                        <li onclick="showInfo('Food and Beverage')">Food and Beverage</li>
-                        <li onclick="showInfo('Logistics and Supply Chain')">Logistics and Supply Chain</li>
-                        <li onclick="showInfo('Pharmaceuticals')">Pharmaceuticals</li>
-                        <li onclick="showInfo('Fashion and Apparel')">Fashion and Apparel</li>
-                        <li onclick="showInfo('Sports and Fitness')">Sports and Fitness</li>
-                        <li onclick="showInfo('Beauty and Personal Care')">Beauty and Personal Care</li>
-                        <li onclick="showInfo('Software as a Service (SaaS)')">Software as a Service (SaaS)</li>
-                        <li onclick="showInfo('Fitness and Wellness')">Fitness and Wellness</li>
-                        <li onclick="showInfo('Pet Care and Services')">Pet Care and Services</li>
-                        <li onclick="showInfo('Construction and Building Materials')">Construction and Building Materials</li>
-                        <li onclick="showInfo('Marketing and Advertising')">Marketing and Advertising</li>
-                        <li onclick="showInfo('Event Planning and Management')">Event Planning and Management</li>
-                        <li onclick="showInfo('Luxury Goods and Services')">Luxury Goods and Services</li>
-                        <li onclick="showInfo('Transportation Services')">Transportation Services</li>
-                        <li onclick="showInfo('Security Services')">Security Services</li>
-                        <li onclick="showInfo('Subscription Services')">Subscription Services</li>
-
-                    </ul>
-
-                </div>
-                <div class="righty">
-                    <div class="call-center">
-                        <img src="./assets/Frame.png" alt="">
-                        <div class="nam" id="info-display">
-                            <h2>Industry Name</h2>
-                            <p>At Supportics, we're not just a service provider; we're an extension of your team. Our
-                                passionate professionals bring
-                                years of experience and a deep understanding of customer service dynamics.
-                            </p>
-                            <p>
-                                We believe in creating meaningful connections with your customers, ensuring their needs
-                                are met with empathy and
-                                expertise
-                            </p>
-
-                        </div>
-                    </div>
-
-
-                      
-                </div>
-            </div>
+          </div>
         </div>
-        <!-- Contact section started -->
-        
-        <div class="contact">
-            <div class="imageTag">
-                <div style="background: linear-gradient(0deg, #28A745 7.1%, rgba(40, 167, 69, 0.00) 96.87%);"
-                    class="inner-content">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="566" height="60" viewBox="0 0 566 60" fill="none">
-                        <path d="M1 58C59.8333 33.8333 196.9 -12.9 268.5 7.49998C340.1 27.9 496 23 565 18" stroke="#28A745"
-                            stroke-width="3" />
-                    </svg>
-                    <button class="foems">Don’t like filling forms?</button>
-                    <div class="phonenmb">
-                        <div class="cntct">
-                            <img src="/assets/Frame 95635.png" alt="">
-                            <h5>+1 23 4567 89</h5>
-                        </div>
-        
-                        <div class="cntct">
-                            <img src="/assets/Frame 95636.png" alt="">
-                            <h5>hey@supportics.co</h5>
-                        </div>
-                    </div>
-                </div>
+      </div>
+      <!-- Contact section started -->
+
+      <div class="contact">
+        <div class="imageTag">
+          <div
+            style="
+              background: linear-gradient(
+                0deg,
+                #28a745 7.1%,
+                rgba(40, 167, 69, 0) 96.87%
+              );
+            "
+            class="inner-content"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="566"
+              height="60"
+              viewBox="0 0 566 60"
+              fill="none"
+            >
+              <path
+                d="M1 58C59.8333 33.8333 196.9 -12.9 268.5 7.49998C340.1 27.9 496 23 565 18"
+                stroke="#28A745"
+                stroke-width="3"
+              />
+            </svg>
+            <button class="foems">Don’t like filling forms?</button>
+            <div class="phonenmb">
+              <div class="cntct">
+                <img src="/assets/Frame 95635.png" alt="" />
+                <h5>+1 23 4567 89</h5>
+              </div>
+
+              <div class="cntct">
+                <img src="/assets/Frame 95636.png" alt="" />
+                <h5>hey@supportics.co</h5>
+              </div>
             </div>
-            <form class="main-form" action="submit">
-                <h1>Get A Free Quote!</h1>
-                <p class="fill">Fill out this form and we will get back to you within 12-24 hours.</p>
-        
-                <div class="inputs">
-                    <input type="text" name="Name" placeholder="Name" id="name">
-                    <input type="email" name="Email" placeholder="Email*" id="name">
-                </div>
-                <div class="inputs">
-                    <input type="tel" name="Phone" placeholder="Phone" id="name">
-                    <input type="text" name="Company" placeholder="Company*" id="name">
-                </div>
-        
-                <textarea type="text" name="" placeholder="Tell us here!" id="message"> </textarea>
-                <div class="form-btn">
-                    <input type="submit" value="Submit" id="submit">
-                </div>
-            </form>
+          </div>
         </div>
-        <!-- Contact section ended -->
+        <form class="main-form" action="submit">
+          <h1>Get A Free Quote!</h1>
+          <p class="fill">
+            Fill out this form and we will get back to you within 12-24 hours.
+          </p>
+
+          <div class="inputs">
+            <input type="text" name="Name" placeholder="Name" id="name" />
+            <input type="email" name="Email" placeholder="Email*" id="name" />
+          </div>
+          <div class="inputs">
+            <input type="tel" name="Phone" placeholder="Phone" id="name" />
+            <input
+              type="text"
+              name="Company"
+              placeholder="Company*"
+              id="name"
+            />
+          </div>
+
+          <textarea
+            type="text"
+            name=""
+            placeholder="Tell us here!"
+            id="message"
+          >
+          </textarea>
+          <div class="form-btn">
+            <input type="submit" value="Submit" id="submit" />
+          </div>
+        </form>
+      </div>
+      <!-- Contact section ended -->
     </div>
 
-<script>
-    function showInfo(industry) {
-     const items = document.querySelectorAll("#industry-list li");
-     items.forEach(item=>item.classList.remove("active"));
+    <script>
+      function showInfo(industry) {
+        const items = document.querySelectorAll("#industry-list li");
+        items.forEach((item) => item.classList.remove("active"));
 
-           const activeItem = document.querySelector(`#industry-list li[onclick="showInfo('${industry}')"]`);
-        activeItem.classList.add('active');
+        const activeItem = document.querySelector(
+          `#industry-list li[onclick="showInfo('${industry}')"]`
+        );
+        activeItem.classList.add("active");
 
-         const infoDisplay = document.getElementById('info-display');
-         let info= ""
+        const infoDisplay = document.getElementById("info-display");
+        let info = "";
 
-         switch (industry) {
-            case "E-commerce":
-                info=" <h2>E-commerce</h2><p>Customers experience matters more than ever. With Supportics, you're not just getting support, you’re getting a team that's responsive, knowledgeable, and dedicated to making every interaction count. We handle everything from quick questions to complex issues, for customers to feel valued and heard. We grow your online business and keeping your customers coming back for more.</p>"
-                break;
-         
-            default:
-                break;
-         }
-    }
-</script>
-
-    <script src="./script.js"></script>
+        switch (industry) {
+          case "E-commerce":
+            info = `
+                        <h2>E-commerce</h2>
+                        <p>Customers experience matters more than ever. With Supportics, you're not just getting support, you’re getting a team that's responsive, knowledgeable, and dedicated to making every interaction count. We handle everything from quick questions to complex issues, for customers to feel valued and heard. We grow your online business and keeping your customers coming back for more.
+</p>
+                    `;
+            break;
+          case "Automotive":
+            info = `
+                        <h2>Automotive</h2>
+                        <p>Supportics understands the intricacies of the automotive industry, from customer inquiries about vehicles to after-sales support. We craft personalized solutions that enhance customer engagement so your clients receive the expert attention they need to stay satisfied. Our team is dedicated to helping you drive success in this fast-paced market.
+</p>
+                    `;
+            break;
+          case "Healthcare":
+            info = `
+                        <h2>Healthcare</h2>
+                        <p>In healthcare, precision and empathy go hand in hand. At Supportics, we provide reliable support that keeps your patients satisfied and your communication seamless. Our team is specially trained to handle sensitive information with the utmost care, offering the kind of assistance that builds trust and keeps your operations running smoothly.
+</p>
+                    `;
+            break;
+          case "Technology":
+            info = `
+                        <h2>Technology</h2>
+                        <p>Supportics understands the fast-paced world of tech, and we’re here to keep you ahead of the curve. Our expert team is ready to deliver the top-notch customer service your users need, whether it’s troubleshooting tricky issues or guiding them through complex systems. We’ve got your tech support covered, so you can stay focused on maintaining your competitive edge.
+</p>
+                    `;
+            break;
+          case "Finance and Banking":
+            info = `
+                        <h2>Finance and Banking</h2>
+                        <p>In the finance and banking world, trust and accuracy are everything. At Supportics, we deliver secure, efficient customer support that meets the high standards of your industry. Our team handles every inquiry with professionalism and confidentiality, ensuring your clients receive the excellent service they expect and deserve.</p>
+                    `;
+            break;
+          case "Travel and Hospitality":
+            info = `
+                        <h2>Travel and Hospitality</h2>
+                        <p>At Supportics, we’re here to elevate the travel and hospitality experience with prompt, courteous customer support. Whether it's booking assistance or resolving travel-related issues, we make sure your clients get the attention they need for a smoother, more enjoyable journey. Let us help you create unforgettable experiences for your customers.</p>
+                    `;
+            break;
+          case "Retail":
+            info = `
+                        <h2>Retail</h2>
+                        <p>In today’s retail world, keeping customers happy is everything. At Supportics, we deliver comprehensive support that keeps your customers smiling and coming back. Whether it's answering product questions or handling returns, our team is dedicated to providing the exceptional service your business needs to thrive.</p>
+                    `;
+            break;
+          case "Real Estate":
+            info = `
+                        <h2>Real Estate</h2>
+                        <p>We get it real estate has its own unique demands. Supportics offers specialized support that helps you manage client inquiries, schedule viewings, and ensure smooth transactions. We’re here to enhance your customer experience, building trust and confidence in your services with every interaction.</p>
+                    `;
+            break;
     
-</body>
+                    case "Education":
+                info = `
+                        <h2>Education</h2>
+                        <p>Clear communication and support are vital in education. Supportics is here to provide dedicated assistance for educational institutions, helping students, parents, and staff with their inquiries and issues. We ensure your operations run smoothly, so you can focus on what really matters, delivering quality education.</p>
+                    `;
+                break;
+                      case "Entertainment and Media":
+                info = `
+                        <h2>Entertainment and Media </h2>
+                        <p>In the entertainment and media industry, audience engagement is key. Supportics specializes in handling high volumes of requests, managing audience engagement, and answering content inquiries. We make sure your fans and customers get the timely and accurate information they need, enhancing their experience with your brand.
+</p>
+                    `;
+                break;
+   
+          case "Food and Beverage":
+            info = `
+                        <h2>Food and Beverage</h2>
+                        <p>The fast-paced food and beverage industry demands exceptional customer service, and that’s where we come in. Supportics provides responsive support to manage orders, answer inquiries, and address customer concerns. We’re committed to delivering the quality service that keeps your customers satisfied and your business thriving.
 
+</p>
+                    `;
+            break;
+          case "Logistics and Supply Chain":
+            info = `<h2>Logistics and Supply Chain </h2> <p>In logistics and supply chain, smooth communication and quick problem resolution are crucial. Supportics offers tailored support to manage customer inquiries, track shipments, and resolve issues efficiently. We’re here to keep your operations running seamlessly, so you can focus on timely deliveries.</p>
+                    `;
+            break;
+          case "Pharmaceuticals":
+            info = `
+                        <h2>Pharmaceuticals </h2>
+                        <p>Accuracy and compliance are everything in the pharmaceutical industry. At Supportics, we provide reliable customer support to handle patient inquiries and pharmaceutical requests with care and precision. Our team is trained to manage sensitive information, helping you maintain trust and adhere to industry standards.
+</p>
+                    `;
+            break;
+          case "Pharmaceuticals":
+            info = `
+                        <h2>Pharmaceuticals </h2>
+                        <p>Accuracy and compliance are everything in the pharmaceutical industry. At Supportics, we provide reliable customer support to handle patient inquiries and pharmaceutical requests with care and precision. Our team is trained to manage sensitive information, helping you maintain trust and adhere to industry standards.
+</p>
+                    `;
+            break;
+          case "Fashion and Apparel":
+            info = `
+                        <h2>Fashion and Apparel </h2>
+                        <p>We understand the fast-moving world of fashion and apparel. Supportics provides top-notch customer support to manage inquiries, process returns, and keep your customers in the know about the latest trends. We’re dedicated to enhancing your brand’s reputation and building customer loyalty.
+</p>
+                    `;
+            break;
+          case "Sports and Fitness":
+            info = `
+                        <h2>Sports and Fitness </h2>
+                        <p>In sports and fitness, engaging your customers is key to success. Supportics offers dedicated support to help you manage memberships, handle inquiries, and provide timely information. We’re here to ensure your customers get the guidance they need to stay motivated and achieve their fitness goals.
+
+</p>
+                    `;
+            break;
+          case "Beauty and Personal Care":
+            info = `
+                        <h2>Beauty and Personal Care </h2>
+                        <p>In the beauty and personal care industry, a seamless customer experience is a must. Supportics specializes in managing customer inquiries, product questions, and order issues. We’re dedicated to ensuring your clients feel valued and confident in their choices.
+
+</p>
+                    `;
+            break;
+          case "Software as a Service (SaaS)":
+            info = `
+                        <h2>Software as a Service (SaaS)</h2>
+                        <p>Supportics knows the SaaS world inside and out. We provide expert support to help you manage user inquiries, troubleshoot issues, and guide customers through your platform. Our team is committed to delivering fast, effective solutions, ensuring your users have a positive experience with your software.
+</p>
+                    `;
+            break;
+          case "Fitness and Wellness":
+            info = `
+                        <h2>Fitness and Wellness  </h2>
+                        <p>In the fitness and wellness industry, building a supportive community is vital. Supportics offers comprehensive support to ensure your clients get the guidance and motivation they need. From managing memberships to addressing inquiries, we’re here to help you foster health and well-being.
+</p>
+                    `;
+            break;
+          case "Pet Care and Services":
+            info = `
+                        <h2>Pet Care and Services </h2>
+                        <p>In the pet care industry, trust and compassion are essential. At Supportics, we provide responsive support to manage customer inquiries, schedule appointments, and handle service requests. We’re dedicated to making pet owners feel confident and cared for, knowing their pets are in good hands.
+</p>
+                    `;
+            break;
+          case "Construction and Building Materials":
+            info = `
+                        <h2>Construction and Building Materials  </h2>
+                        <p>Supportics understands the demands of the construction and building materials industry. We offer specialized support to manage client inquiries, project updates, and material orders. Our team ensures smooth communication and quick problem resolution, so you can focus on delivering high-quality construction services.
+</p>
+                    `;
+            break;
+          case "Marketing and Advertising":
+            info = `
+                        <h2>Marketing and Advertising </h2>
+                        <p>In marketing and advertising, timely and accurate support is a must. Supportics provides expert assistance to manage client inquiries, campaign updates, and creative feedback. We’re dedicated to keeping your projects running smoothly and your clients satisfied.
+</p>
+                    `;
+            break;
+          case "Event Planning and Management":
+            info = `
+                        <h2>Event Planning and Management  </h2>
+                        <p>At Supportics, we’re all about making events a success. We offer dedicated support to help you coordinate details, manage inquiries, and handle last-minute changes. Our team is committed to providing the support you need to create unforgettable experiences for your clients.
+</p>
+                    `;
+            break;
+            case "Luxury Goods and Services":
+                info = `
+                        <h2>Luxury Goods and Services </h2>
+                        <p>In the luxury goods and services industry, exceptional customer service is a must. Supportics provides high-quality support to manage exclusive client inquiries, product orders, and service requests. We’re dedicated to delivering a premium experience that reflects the luxury of your brand.
+ </p>
+                    `;
+                break;
+          case "Transportation Services":
+            info = `
+                        <h2>Transportation Services</h2>
+                        <p>Efficient communication and quick problem resolution are key in the transportation industry. Supportics offers tailored support to manage bookings, address customer concerns, and ensure timely transportation services. We’re here to help you keep your clients on the move.
+
+</p>
+                    `;
+            break;
+          case "Security Services":
+            info = `
+                        <h2>Security Services</h2>
+                        <p>Trust and reliability are critical in security services. Supportics provides dedicated support to manage client inquiries, service updates, and emergency responses. We’re committed to ensure your clients feel secure and confident in the protection you provide.
+</p>
+                    `;
+            break;
+          case "Subscription Services":
+            info = `
+                        <h2>Subscription Services</h2>
+                        <p>In subscriptions, seamless experiences keep customers hooked. Supportics provides expert support to manage customer inquiries, resolve billing issues, and update services. We’re dedicated to ensuring your subscribers stay happy, loyal, and engaged with your brand.
+
+</p>
+                    `;
+            break;
+          default:
+            info = `
+                        <h2>Industry Name</h2>
+                        <p>Please select an industry to view the details.</p>
+                    `;
+        }
+
+        infoDisplay.innerHTML = info;
+      }
+    </script>
+  </body>
 </html>
