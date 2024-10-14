@@ -2574,7 +2574,8 @@ border: 1px solid #0F67FE;
   }
   .mobile-menus{
     width: 100vw;
-
+        position: absolute;
+        top: 10%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -3292,6 +3293,12 @@ width: 85%;
     }
     .section-inner {
       margin-top: 320% !important;
+    }
+        .mobile-menus a {
+        font-size: 32px;
+        text-decoration: none;
+        font-weight: 600;
+        color: #FFFFFF;
     }
     .assist {
       margin-top: 300% !important;
