@@ -30,3 +30,22 @@ tl.from(".inner img", {
   y: 30,
   delay: 0.1,
 });
+
+
+
+// Industries animations
+
+tl.from(".call-center img", {
+  opacity: 0,
+  duration: 0.5,
+  x: -30,
+  delay: 0.1,
+});
+
+tl.from(".nam", {
+  opacity: 0,
+  duration: 0.5,
+  x: 30,
+  delay: 0.1,
+});
+

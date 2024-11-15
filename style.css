@@ -569,6 +569,7 @@ select {
 .card {
   display: flex;
   width: 25vw;
+  height: 40vh;
   padding: 23px 24px;
   align-items: flex-start;
   gap: 60px;
