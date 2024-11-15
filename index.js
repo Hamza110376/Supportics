@@ -19,7 +19,7 @@ tl.from(".trial", {
   opacity: 0,
   duration: 0.5,
   x: 30,
-  delay: 0.5,
+  delay: 0.1,
 });
 
 
@@ -27,6 +27,6 @@ tl.from(".trial", {
 tl.from(".inner img", {
   opacity: 0,
   duration: 0.5,
-  x: 30,
-  delay: 0.5,
+  y: 30,
+  delay: 0.1,
 });
