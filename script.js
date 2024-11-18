@@ -8,16 +8,6 @@ navLinks.forEach((link) => {
   } else {
     link.classList.remove("active"); // Remove 'active' class from others
   }
-
-
-    if (
-      activePage === "http://localhost/supportics/" &&
-      link.textContent.trim() === "Home"
-    ) {
-      link.classList.add("active");
-    } else {
-      link.classList.remove("active");
-    }
 });
 
 // slider section js
