@@ -1,9 +1,23 @@
-const activePage = window.location.pathname;
-const navLinks = document.querySelectorAll("nav a").forEach((link) => {
-  if (link.href.includes(`${activePage}`)) {
-    link.classList.add("active");
-    console.log(link);
+const activePage = window.location.href; // Get the current URL
+const navLinks = document.querySelectorAll("nav a"); // Select all nav links
+
+navLinks.forEach((link) => {
+  // Check if the link's href matches the current URL
+  if (activePage.includes(link.href)) {
+    link.classList.add("active"); // Add 'active' class to the matching link
+  } else {
+    link.classList.remove("active"); // Remove 'active' class from others
   }
+
+
+    if (
+      activePage === "http://localhost/supportics/" &&
+      link.textContent.trim() === "Home"
+    ) {
+      link.classList.add("active");
+    } else {
+      link.classList.remove("active");
+    }
 });
 
 // slider section js
