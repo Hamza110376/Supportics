@@ -192,3 +192,44 @@ items.forEach((item)=> item.classList.remove("active"))
    minilogo.style.display = "block";     nav.style.left="20%" } else {    nav.style.top = "20px";     btn.style.display = "none";
     minilogo.style.display = "none";
     nav.style.left = "30%"; } });
+
+
+       const swiperEl = document.querySelector("swiper-container");
+       const swiper = swiperEl.swiper;
+
+       var appendNumber = 4;
+       var prependNumber = 1;
+       document
+         .querySelector(".prepend-2-slides")
+         .addEventListener("click", function (e) {
+           e.preventDefault();
+           swiper.prependSlide([
+             "<swiper-slide>Slide " + --prependNumber + "</swiper-slide>",
+             "<swiper-slide>Slide " + --prependNumber + "</swiper-slide>",
+           ]);
+         });
+       document
+         .querySelector(".prepend-slide")
+         .addEventListener("click", function (e) {
+           e.preventDefault();
+           swiper.prependSlide(
+             "<swiper-slide>Slide " + --prependNumber + "</swiper-slide>"
+           );
+         });
+       document
+         .querySelector(".append-slide")
+         .addEventListener("click", function (e) {
+           e.preventDefault();
+           swiper.appendSlide(
+             "<swiper-slide>Slide " + ++appendNumber + "</swiper-slide>"
+           );
+         });
+       document
+         .querySelector(".append-2-slides")
+         .addEventListener("click", function (e) {
+           e.preventDefault();
+           swiper.appendSlide([
+             "<swiper-slide>Slide " + ++appendNumber + "</swiper-slide>",
+             "<swiper-slide>Slide " + ++appendNumber + "</swiper-slide>",
+           ]);
+         });
